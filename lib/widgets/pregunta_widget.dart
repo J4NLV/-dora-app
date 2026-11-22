@@ -64,7 +64,9 @@ class _PreguntaWidgetState extends State<PreguntaWidget> with TickerProviderStat
               itemCount: opciones.length,
               itemBuilder: (context, index) {
                 final opcion = opciones[index];
-                bool isCorrect = opcion.toString() == correcta.toString();
+                String cleanOpcion = opcion.toString().replaceAll('\r', '').replaceAll('\\n', '\n').trim();
+                String cleanCorrecta = (correcta ?? '').toString().replaceAll('\r', '').replaceAll('\\n', '\n').trim();
+                bool isCorrect = cleanOpcion == cleanCorrecta;
                 bool isSelected = selectedIndex == index;
 
                 return Padding(
@@ -110,17 +112,33 @@ class _PreguntaWidgetState extends State<PreguntaWidget> with TickerProviderStat
         return ScaleTransition(
           scale: CurvedAnimation(parent: anim1, curve: Curves.elasticOut),
           child: AlertDialog(
-            backgroundColor: esCorrecta ? const Color(0xFFE8F5E9) : const Color(0xFFFFEBEE),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30), side: BorderSide(color: esCorrecta ? Colors.green : Colors.red, width: 3)),
-            title: Icon(esCorrecta ? Icons.stars_rounded : Icons.sentiment_very_dissatisfied_rounded, 
-                       color: esCorrecta ? Colors.green : Colors.red, size: 80),
+            backgroundColor: esCorrecta ? const Color(0xFFE8F5E9) : const Color(0xFFEDE7F6),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30), 
+              side: BorderSide(color: esCorrecta ? Colors.green : const Color(0xFF7B5BA3), width: 3)
+            ),
+            title: Icon(
+              esCorrecta ? Icons.stars_rounded : Icons.lightbulb_outline_rounded, 
+              color: esCorrecta ? Colors.green : const Color(0xFF7B5BA3), 
+              size: 80
+            ),
             content: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text(esCorrecta ? "¡INCREÍBLE!" : "¡SIGUE INTENTANDO!", 
-                    style: TextStyle(fontSize: 26, fontWeight: FontWeight.w900, color: esCorrecta ? Colors.green[800] : Colors.red[800])),
+                Text(
+                  esCorrecta ? "¡INCREÍBLE!" : "¡SIGUE INTENTANDO!", 
+                  style: TextStyle(
+                    fontSize: 26, 
+                    fontWeight: FontWeight.w900, 
+                    color: esCorrecta ? Colors.green[800] : const Color(0xFF5B3A82)
+                  )
+                ),
                 const SizedBox(height: 15),
-                Text(retro ?? "", textAlign: TextAlign.center, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.black87)),
+                Text(
+                  retro ?? "", 
+                  textAlign: TextAlign.center, 
+                  style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.black87)
+                ),
               ],
             ),
             actions: [
@@ -185,8 +203,8 @@ class _OptionCardState extends State<_OptionCard> with SingleTickerProviderState
         bgColor = Colors.green[100]!;
         borderColor = Colors.green;
       } else if (widget.isCorrect == false) {
-        bgColor = Colors.red[100]!;
-        borderColor = Colors.red;
+        bgColor = const Color(0xFFEDE7F6);
+        borderColor = const Color(0xFF7B5BA3);
       } else {
         bgColor = const Color(0xFFCE93D8);
         borderColor = const Color(0xFF5B3A82);
@@ -235,7 +253,7 @@ class _OptionCardState extends State<_OptionCard> with SingleTickerProviderState
                     )
                   ),
                   if (widget.isCorrect == true && widget.isSelected) const Icon(Icons.check_circle, color: Colors.green),
-                  if (widget.isCorrect == false && widget.isSelected) const Icon(Icons.cancel, color: Colors.red),
+                  if (widget.isCorrect == false && widget.isSelected) const Icon(Icons.info_outline, color: Color(0xFF7B5BA3)),
                 ],
               ),
             ),

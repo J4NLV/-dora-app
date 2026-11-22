@@ -31,8 +31,8 @@ class DynamicContentScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(leccion.titulo),
-        backgroundColor: const Color(0xFFADD8E6),
-        foregroundColor: const Color(0xFF5B3A82),
+        backgroundColor: const Color(0xFF7B5BA3),
+        foregroundColor: Colors.white,
         elevation: 0,
       ),
       body: Container(
@@ -40,7 +40,7 @@ class DynamicContentScreen extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [Color(0xFFADD8E6), Colors.white],
+            colors: [Color(0xFF7B5BA3), Color(0xFF5B3A82)],
           ),
         ),
         child: _buildContent(leccion.tipo, data),

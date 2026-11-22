@@ -44,22 +44,15 @@ class _QuizWidgetState extends State<QuizWidget> with TickerProviderStateMixin {
   }
 
   void _handleAnswer(bool isCorrect) {
-    final controller = context.read<ContentController>();
     if (isCorrect) {
       _nextQuestion();
     } else {
-      int heartIndex = controller.lives - 1;
-      if (heartIndex >= 0) {
-        _shakeControllers[heartIndex].forward(from: 0.0).then((_) {
-          _scaleControllers[heartIndex].reverse();
-        });
-      }
-      
-      controller.loseLife();
-      
-      if (controller.lives <= 0) {
-        Future.delayed(const Duration(milliseconds: 800), _showGameOverDialog);
-      }
+      // Avanzar amigablemente a la siguiente pregunta tras equivocarse (sin bloqueos punitivos)
+      Future.delayed(const Duration(milliseconds: 300), () {
+        if (mounted) {
+          _nextQuestion();
+        }
+      });
     }
   }
 

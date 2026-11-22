@@ -505,10 +505,10 @@
   "Id": 10,
   "Pregunta": "Si tienes una multiplicación de la misma base **(x² ⋅ x³)**, ¿qué debes hacer con los **exponentes** (el 2 y el 3)?",
   "Opcion_1": "Dejarlos igual",
-  "Opcion_2": "Sumarlos \\n(2+3)",
-  "Opcion_3": "Restarlos \\n(2-3)",
-  "Opcion_4": "Multiplicarlos \\n(2×3)",
-  "Respuesta_Correcta_Texto": "Sumarlos \\n(2+3)",
+  "Opcion_2": "Sumarlos (2+3)",
+  "Opcion_3": "Restarlos (2-3)",
+  "Opcion_4": "Multiplicarlos (2×3)",
+  "Respuesta_Correcta_Texto": "Sumarlos (2+3)",
   "Retroalimentacion": "Para multiplicar bases iguales, se conserva la base y se suman los exponentes. Así, x2⋅x3=x2+3=x5."
  },
  {

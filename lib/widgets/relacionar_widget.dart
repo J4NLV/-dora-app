@@ -81,11 +81,11 @@ class _RelacionarWidgetState extends State<RelacionarWidget> {
         selectedRight = null;
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: const Text("¡Ups! No coinciden, intenta de nuevo.", style: TextStyle(fontWeight: FontWeight.bold)),
-            backgroundColor: Colors.redAccent,
+            content: const Text("¡Casi! No coinciden, intenta con otro par.", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+            backgroundColor: const Color(0xFF7B5BA3),
             behavior: SnackBarBehavior.floating,
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-            duration: const Duration(milliseconds: 800),
+            duration: const Duration(milliseconds: 900),
           )
         );
       }
