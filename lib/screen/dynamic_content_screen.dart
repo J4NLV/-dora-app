@@ -29,32 +29,35 @@ class DynamicContentScreen extends StatelessWidget {
     }
 
     return Scaffold(
+      backgroundColor: const Color(0xFF5B3A82),
       appBar: AppBar(
         title: Text(leccion.titulo),
         backgroundColor: const Color(0xFF7B5BA3),
         foregroundColor: Colors.white,
         elevation: 0,
       ),
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [Color(0xFF7B5BA3), Color(0xFF5B3A82)],
+      body: SizedBox.expand(
+        child: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Color(0xFF7B5BA3), Color(0xFF5B3A82)],
+            ),
           ),
+          child: _buildContent(leccion.tipo, data),
         ),
-        child: _buildContent(leccion.tipo, data),
       ),
       bottomNavigationBar: Container(
         padding: const EdgeInsets.all(20.0),
         decoration: const BoxDecoration(
-          color: Colors.white,
-          boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 10, offset: Offset(0, -5))],
+          color: Color(0xFF5B3A82),
+          boxShadow: [BoxShadow(color: Colors.black26, blurRadius: 10, offset: Offset(0, -5))],
         ),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            backgroundColor: controller.canMoveToNext ? const Color(0xFF7B5BA3) : Colors.grey,
-            foregroundColor: Colors.white,
+            backgroundColor: controller.canMoveToNext ? Colors.white : Colors.white24,
+            foregroundColor: controller.canMoveToNext ? const Color(0xFF5B3A82) : Colors.white60,
             padding: const EdgeInsets.symmetric(vertical: 18),
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
             elevation: controller.canMoveToNext ? 5 : 0,
