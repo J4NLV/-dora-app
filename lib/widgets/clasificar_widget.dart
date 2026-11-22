@@ -13,8 +13,11 @@ class ClasificarWidget extends StatefulWidget {
 class _ClasificarWidgetState extends State<ClasificarWidget> with TickerProviderStateMixin {
   late List<String> items;
   late List<String> categories;
+  late Map<String, String> itemToCategory;
+  late Map<String, String> itemFeedbacks;
   int currentIndex = 0;
-  Map<String, List<String>> userClassification = {};
+  int correctCount = 0;
+  bool isShowingFeedback = false;
   late AnimationController _cardController;
   late Animation<double> _cardScale;
 
@@ -23,12 +26,43 @@ class _ClasificarWidgetState extends State<ClasificarWidget> with TickerProvider
     super.initState();
     items = (widget.data['Items'] as String).split(';').map((e) => e.trim()).toList();
     categories = (widget.data['Categorias'] as String).split(';').map((e) => e.trim()).toList();
-    for (var cat in categories) {
-      userClassification[cat] = [];
-    }
+    _parseAnswersAndFeedbacks();
     
     _cardController = AnimationController(vsync: this, duration: const Duration(milliseconds: 300));
     _cardScale = Tween<double>(begin: 1.0, end: 0.0).animate(CurvedAnimation(parent: _cardController, curve: Curves.easeInBack));
+  }
+
+  void _parseAnswersAndFeedbacks() {
+    itemToCategory = {};
+    itemFeedbacks = {};
+
+    // Parse Clasificacion_Correcta: "Cat1: itemA, itemB; Cat2: itemC"
+    final rawCorrect = widget.data['Clasificacion_Correcta'] as String? ?? "";
+    final catBlocks = rawCorrect.split(';');
+    for (var block in catBlocks) {
+      final parts = block.split(':');
+      if (parts.length >= 2) {
+        final catName = parts[0].trim();
+        final itemsInCat = parts[1].split(',').map((e) => e.trim()).toList();
+        for (var it in itemsInCat) {
+          if (it.isNotEmpty) {
+            itemToCategory[it] = catName;
+          }
+        }
+      }
+    }
+
+    // Parse Retroalimentacion: "itemA: explicacion; itemB: explicacion"
+    final rawRetro = widget.data['Retroalimentacion'] as String? ?? "";
+    final retroBlocks = rawRetro.split(';');
+    for (var block in retroBlocks) {
+      final parts = block.split(':');
+      if (parts.length >= 2) {
+        final itemKey = parts[0].trim();
+        final feedbackText = parts.sublist(1).join(':').trim();
+        itemFeedbacks[itemKey] = feedbackText;
+      }
+    }
   }
 
   @override
@@ -37,22 +71,140 @@ class _ClasificarWidgetState extends State<ClasificarWidget> with TickerProvider
     super.dispose();
   }
 
-  void _classify(String category) {
-    _cardController.forward().then((_) {
-      setState(() {
-        userClassification[category]!.add(items[currentIndex]);
-        if (currentIndex < items.length - 1) {
-          currentIndex++;
-          _cardController.reverse();
-        } else {
-          context.read<ContentController>().allowNext();
-          _showResults();
-        }
-      });
+  void _classify(String chosenCategory) {
+    if (isShowingFeedback) return;
+
+    final currentItem = items[currentIndex];
+    final correctCat = itemToCategory[currentItem] ?? "";
+    
+    // Comparar categoría elegida con la correcta (normalizado para nombres largos o siglas)
+    bool isCorrect = chosenCategory.trim().toLowerCase() == correctCat.trim().toLowerCase() ||
+        (correctCat.isNotEmpty && (chosenCategory.toLowerCase().startsWith(correctCat.toLowerCase()) || 
+                                   correctCat.toLowerCase().startsWith(chosenCategory.toLowerCase())));
+
+    if (isCorrect) {
+      correctCount++;
+    }
+
+    final specificFeedback = itemFeedbacks[currentItem];
+
+    setState(() {
+      isShowingFeedback = true;
     });
+
+    _showItemFeedback(
+      isCorrect: isCorrect,
+      item: currentItem,
+      correctCat: correctCat.isNotEmpty ? correctCat : chosenCategory,
+      explanation: specificFeedback,
+      onDismiss: () {
+        setState(() {
+          isShowingFeedback = false;
+        });
+
+        _cardController.forward().then((_) {
+          if (currentIndex < items.length - 1) {
+            setState(() {
+              currentIndex++;
+            });
+            _cardController.reverse();
+          } else {
+            context.read<ContentController>().allowNext();
+            _showSummaryResults();
+          }
+        });
+      },
+    );
   }
 
-  void _showResults() {
+  void _showItemFeedback({
+    required bool isCorrect,
+    required String item,
+    required String correctCat,
+    String? explanation,
+    required VoidCallback onDismiss,
+  }) {
+    showGeneralDialog(
+      context: context,
+      barrierDismissible: false,
+      pageBuilder: (context, a1, a2) => const SizedBox(),
+      transitionBuilder: (context, a1, a2, child) {
+        return ScaleTransition(
+          scale: CurvedAnimation(parent: a1, curve: Curves.elasticOut),
+          child: AlertDialog(
+            backgroundColor: isCorrect ? const Color(0xFFE8F5E9) : const Color(0xFFEDE7F6),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30),
+              side: BorderSide(
+                color: isCorrect ? Colors.green : const Color(0xFF7B5BA3),
+                width: 3,
+              ),
+            ),
+            title: Icon(
+              isCorrect ? Icons.check_circle_rounded : Icons.lightbulb_outline_rounded,
+              color: isCorrect ? Colors.green : const Color(0xFF7B5BA3),
+              size: 65,
+            ),
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  isCorrect ? "¡CORRECTO!" : "¡AQUÍ APRENDEMOS!",
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.w900,
+                    color: isCorrect ? Colors.green[800] : const Color(0xFF5B3A82),
+                  ),
+                ),
+                const SizedBox(height: 12),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15),
+                    border: Border.all(color: const Color(0xFF5B3A82).withOpacity(0.2)),
+                  ),
+                  child: Text(
+                    "$item  ➔  $correctCat",
+                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Color(0xFF5B3A82)),
+                  ),
+                ),
+                if (explanation != null && explanation.isNotEmpty) ...[
+                  const SizedBox(height: 12),
+                  Text(
+                    explanation,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Colors.black87),
+                  ),
+                ],
+              ],
+            ),
+            actions: [
+              Center(
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF5B3A82),
+                    foregroundColor: Colors.white,
+                    shape: const StadiumBorder(),
+                    padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 12),
+                    elevation: 4,
+                  ),
+                  onPressed: () {
+                    Navigator.pop(context);
+                    onDismiss();
+                  },
+                  child: const Text("CONTINUAR", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+      transitionDuration: const Duration(milliseconds: 400),
+    );
+  }
+
+  void _showSummaryResults() {
     showGeneralDialog(
       context: context,
       barrierDismissible: false,
@@ -64,12 +216,19 @@ class _ClasificarWidgetState extends State<ClasificarWidget> with TickerProvider
             backgroundColor: const Color(0xFF5B3A82),
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
             title: const Icon(Icons.stars_rounded, color: Colors.yellowAccent, size: 70),
-            content: SingleChildScrollView(
-              child: Text(
-                widget.data['Retroalimentacion'] ?? "¡Excelente clasificación!",
-                textAlign: TextAlign.center,
-                style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600),
-              ),
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Text(
+                  "¡Reto completado!",
+                  style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.w900),
+                ),
+                const SizedBox(height: 10),
+                Text(
+                  "Aciertos: $correctCount de ${items.length}",
+                  style: const TextStyle(color: Colors.white70, fontSize: 16, fontWeight: FontWeight.w600),
+                ),
+              ],
             ),
             actions: [
               Center(

@@ -41,11 +41,11 @@ class NivelesScreen extends StatelessWidget {
                 ),
               ),
               title: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   _buildTopStat(Icons.local_fire_department, "${playerState.streakDays}", Colors.orangeAccent),
+                  const SizedBox(width: 25),
                   _buildTopStat(Icons.monetization_on, "${playerState.doracoins}", Colors.yellowAccent),
-                  _buildTopStat(Icons.favorite, "${controller.lives}", Colors.redAccent),
                 ],
               ),
               centerTitle: true,
