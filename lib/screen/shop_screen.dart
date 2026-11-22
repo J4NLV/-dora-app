@@ -40,60 +40,6 @@ final List<ShopItem> allShopItems = [
     price: 500,
     category: 'hair',
   ),
-
-  // Lentes (80 y 120 Doracoins)
-  ShopItem(
-    id: 'glasses_classic',
-    name: 'Lentes Clásicos',
-    shopImage: 'assets/bombilla.png',
-    avatarImage: 'assets/bombilla.png',
-    price: 80,
-    category: 'glasses',
-  ),
-  ShopItem(
-    id: 'glasses_modern',
-    name: 'Lentes Modernos',
-    shopImage: 'assets/bombilla.png',
-    avatarImage: 'assets/bombilla.png',
-    price: 120,
-    category: 'glasses',
-  ),
-
-  // Sombreros (150 y 200 Doracoins)
-  ShopItem(
-    id: 'hat_cap',
-    name: 'Gorra Dora',
-    shopImage: 'assets/bombilla.png',
-    avatarImage: 'assets/bombilla.png',
-    price: 150,
-    category: 'hat',
-  ),
-  ShopItem(
-    id: 'hat_beanie',
-    name: 'Gorro de Invierno',
-    shopImage: 'assets/bombilla.png',
-    avatarImage: 'assets/bombilla.png',
-    price: 200,
-    category: 'hat',
-  ),
-
-  // Zapatos / Botas (220 y 280 Doracoins)
-  ShopItem(
-    id: 'shoes_sneakers',
-    name: 'Tenis Deportivos',
-    shopImage: 'assets/bombilla.png',
-    avatarImage: 'assets/bombilla.png',
-    price: 220,
-    category: 'shoes',
-  ),
-  ShopItem(
-    id: 'shoes_boots',
-    name: 'Botas Aventureras',
-    shopImage: 'assets/bombilla.png',
-    avatarImage: 'assets/bombilla.png',
-    price: 280,
-    category: 'shoes',
-  ),
 ];
 
 class ShopScreen extends StatelessWidget {
@@ -105,9 +51,6 @@ class ShopScreen extends StatelessWidget {
     final playerState = playerNotifier.playerState;
 
     final wigs = allShopItems.where((i) => i.category == 'hair').toList();
-    final glasses = allShopItems.where((i) => i.category == 'glasses').toList();
-    final hats = allShopItems.where((i) => i.category == 'hat').toList();
-    final shoes = allShopItems.where((i) => i.category == 'shoes').toList();
 
     return Scaffold(
       backgroundColor: const Color(0xFF7B5BA3),
@@ -158,30 +101,27 @@ class ShopScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(16.0),
                 children: [
                   _AnimatedShopSection(
-                    title: 'Lentes',
-                    items: glasses,
+                    title: 'Pelucas',
+                    items: wigs,
                     playerNotifier: playerNotifier,
                     delay: 0,
                   ),
                   const SizedBox(height: 16),
-                  _AnimatedShopSection(
-                    title: 'Sombreros',
-                    items: hats,
-                    playerNotifier: playerNotifier,
+                  const _AnimatedShopSection(
+                    title: 'Lentes',
+                    items: [], 
                     delay: 100,
                   ),
                   const SizedBox(height: 16),
-                  _AnimatedShopSection(
-                    title: 'Zapatos',
-                    items: shoes,
-                    playerNotifier: playerNotifier,
+                  const _AnimatedShopSection(
+                    title: 'Sombreros',
+                    items: [], 
                     delay: 200,
                   ),
                   const SizedBox(height: 16),
-                  _AnimatedShopSection(
-                    title: 'Pelucas',
-                    items: wigs,
-                    playerNotifier: playerNotifier,
+                  const _AnimatedShopSection(
+                    title: 'Zapatos',
+                    items: [], 
                     delay: 300,
                   ),
                   // Espacio extra al final para que no se tape con el bottom nav
