@@ -23,12 +23,13 @@ class ShopItem {
 
 // Catálogo de productos disponibles
 final List<ShopItem> allShopItems = [
+  // Pelucas (Artículos de prestigio: 350 y 500 Doracoins)
   ShopItem(
     id: 'hair_short',
     name: 'Cabello Corto',
     shopImage: 'assets/Tienda/Cabello Corto Maniquí.png',
     avatarImage: 'assets/Tienda/Cabello.png',
-    price: 50,
+    price: 350,
     category: 'hair',
   ),
   ShopItem(
@@ -36,8 +37,62 @@ final List<ShopItem> allShopItems = [
     name: 'Cabello Largo',
     shopImage: 'assets/Tienda/Cabello Largo_Maniqui.png',
     avatarImage: 'assets/Tienda/Cabello Largo.png',
-    price: 100,
+    price: 500,
     category: 'hair',
+  ),
+
+  // Lentes (80 y 120 Doracoins)
+  ShopItem(
+    id: 'glasses_classic',
+    name: 'Lentes Clásicos',
+    shopImage: 'assets/bombilla.png',
+    avatarImage: 'assets/bombilla.png',
+    price: 80,
+    category: 'glasses',
+  ),
+  ShopItem(
+    id: 'glasses_modern',
+    name: 'Lentes Modernos',
+    shopImage: 'assets/bombilla.png',
+    avatarImage: 'assets/bombilla.png',
+    price: 120,
+    category: 'glasses',
+  ),
+
+  // Sombreros (150 y 200 Doracoins)
+  ShopItem(
+    id: 'hat_cap',
+    name: 'Gorra Dora',
+    shopImage: 'assets/bombilla.png',
+    avatarImage: 'assets/bombilla.png',
+    price: 150,
+    category: 'hat',
+  ),
+  ShopItem(
+    id: 'hat_beanie',
+    name: 'Gorro de Invierno',
+    shopImage: 'assets/bombilla.png',
+    avatarImage: 'assets/bombilla.png',
+    price: 200,
+    category: 'hat',
+  ),
+
+  // Zapatos / Botas (220 y 280 Doracoins)
+  ShopItem(
+    id: 'shoes_sneakers',
+    name: 'Tenis Deportivos',
+    shopImage: 'assets/bombilla.png',
+    avatarImage: 'assets/bombilla.png',
+    price: 220,
+    category: 'shoes',
+  ),
+  ShopItem(
+    id: 'shoes_boots',
+    name: 'Botas Aventureras',
+    shopImage: 'assets/bombilla.png',
+    avatarImage: 'assets/bombilla.png',
+    price: 280,
+    category: 'shoes',
   ),
 ];
 
@@ -50,6 +105,9 @@ class ShopScreen extends StatelessWidget {
     final playerState = playerNotifier.playerState;
 
     final wigs = allShopItems.where((i) => i.category == 'hair').toList();
+    final glasses = allShopItems.where((i) => i.category == 'glasses').toList();
+    final hats = allShopItems.where((i) => i.category == 'hat').toList();
+    final shoes = allShopItems.where((i) => i.category == 'shoes').toList();
 
     return Scaffold(
       backgroundColor: const Color(0xFF7B5BA3),
@@ -100,27 +158,30 @@ class ShopScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(16.0),
                 children: [
                   _AnimatedShopSection(
-                    title: 'Pelucas',
-                    items: wigs,
+                    title: 'Lentes',
+                    items: glasses,
                     playerNotifier: playerNotifier,
                     delay: 0,
                   ),
                   const SizedBox(height: 16),
-                  const _AnimatedShopSection(
-                    title: 'Accesorios',
-                    items: [], 
+                  _AnimatedShopSection(
+                    title: 'Sombreros',
+                    items: hats,
+                    playerNotifier: playerNotifier,
                     delay: 100,
                   ),
                   const SizedBox(height: 16),
-                  const _AnimatedShopSection(
-                    title: 'Lentes',
-                    items: [], 
+                  _AnimatedShopSection(
+                    title: 'Zapatos',
+                    items: shoes,
+                    playerNotifier: playerNotifier,
                     delay: 200,
                   ),
                   const SizedBox(height: 16),
-                  const _AnimatedShopSection(
-                    title: 'Botas',
-                    items: [], 
+                  _AnimatedShopSection(
+                    title: 'Pelucas',
+                    items: wigs,
+                    playerNotifier: playerNotifier,
                     delay: 300,
                   ),
                   // Espacio extra al final para que no se tape con el bottom nav
@@ -395,12 +456,14 @@ class _ShopItemCardState extends State<_ShopItemCard> with SingleTickerProviderS
                         await _controller.forward();
                         await _controller.reverse();
                         
-                        // Lógica
+                        // Lógica para todas las categorías
                         if (isOwned) {
                           if (widget.item.category == 'hair') {
                             widget.notifier.equipItem(hair: widget.item.avatarImage);
                           } else if (widget.item.category == 'glasses') {
                             widget.notifier.equipItem(glasses: widget.item.avatarImage);
+                          } else if (widget.item.category == 'hat') {
+                            widget.notifier.equipItem(hat: widget.item.avatarImage);
                           }
                         } else {
                           if (state.doracoins >= widget.item.price) {
@@ -408,12 +471,18 @@ class _ShopItemCardState extends State<_ShopItemCard> with SingleTickerProviderS
                             widget.notifier.addToInventory(widget.item.id);
                             if (widget.item.category == 'hair') {
                               widget.notifier.equipItem(hair: widget.item.avatarImage);
+                            } else if (widget.item.category == 'glasses') {
+                              widget.notifier.equipItem(glasses: widget.item.avatarImage);
+                            } else if (widget.item.category == 'hat') {
+                              widget.notifier.equipItem(hat: widget.item.avatarImage);
                             }
                           } else {
                             ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(
-                                content: Text('¡No tienes suficientes Doracoins!'),
-                                backgroundColor: Colors.red,
+                              SnackBar(
+                                content: const Text('¡No tienes suficientes Doracoins!'),
+                                backgroundColor: const Color(0xFF5B3A82),
+                                behavior: SnackBarBehavior.floating,
+                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
                               ),
                             );
                           }

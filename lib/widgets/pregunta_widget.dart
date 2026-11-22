@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../controllers/content_controller.dart';
+import 'rich_text_helper.dart';
 
 class PreguntaWidget extends StatefulWidget {
   final Map<String, dynamic> data;
@@ -49,14 +50,20 @@ class _PreguntaWidgetState extends State<PreguntaWidget> with TickerProviderStat
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Text(
-            pregunta, 
-            style: const TextStyle(
-              fontSize: 24, 
-              fontWeight: FontWeight.w900, 
+          FormattedText(
+            text: pregunta,
+            baseStyle: const TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
               color: Color(0xFF5B3A82),
-              height: 1.2,
-            )
+              height: 1.25,
+            ),
+            boldStyle: const TextStyle(
+              fontSize: 23,
+              fontWeight: FontWeight.w900,
+              color: Color(0xFF3E2759),
+              height: 1.25,
+            ),
           ),
           const SizedBox(height: 30),
           Expanded(
@@ -134,10 +141,11 @@ class _PreguntaWidgetState extends State<PreguntaWidget> with TickerProviderStat
                   )
                 ),
                 const SizedBox(height: 15),
-                Text(
-                  retro ?? "", 
-                  textAlign: TextAlign.center, 
-                  style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.black87)
+                FormattedText(
+                  text: retro ?? "",
+                  textAlign: TextAlign.center,
+                  baseStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.black87),
+                  boldStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w900, color: Color(0xFF5B3A82)),
                 ),
               ],
             ),
@@ -247,10 +255,11 @@ class _OptionCardState extends State<_OptionCard> with SingleTickerProviderState
                   ),
                   const SizedBox(width: 15),
                   Expanded(
-                    child: Text(
-                      widget.text, 
-                      style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xFF4A2F6A))
-                    )
+                    child: FormattedText(
+                      text: widget.text,
+                      baseStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xFF4A2F6A)),
+                      boldStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.w900, color: Color(0xFF2C1945)),
+                    ),
                   ),
                   if (widget.isCorrect == true && widget.isSelected) const Icon(Icons.check_circle, color: Colors.green),
                   if (widget.isCorrect == false && widget.isSelected) const Icon(Icons.info_outline, color: Color(0xFF7B5BA3)),

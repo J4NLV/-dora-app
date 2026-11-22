@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'rich_text_helper.dart';
 
 class VideoWidget extends StatelessWidget {
   final Map<String, dynamic> data;
@@ -24,22 +25,25 @@ class VideoWidget extends StatelessWidget {
               children: [
                 Icon(Icons.play_circle_fill, color: Colors.white, size: 60),
                 SizedBox(height: 10),
-                Text("Cargando video...", style: TextStyle(color: Colors.white)),
+                Text("Video de YouTube próximamente", style: TextStyle(color: Colors.white70, fontWeight: FontWeight.bold)),
               ],
             ),
           ),
           const SizedBox(height: 25),
-          Text(
-            data['Tema'] ?? "Sin título",
-            style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          FormattedText(
+            text: data['Tema'] ?? "Sin título",
+            baseStyle: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
+            boldStyle: const TextStyle(fontSize: 24, fontWeight: FontWeight.w900, color: Colors.yellowAccent),
           ),
           const SizedBox(height: 15),
-          Text(
-            data['Explicación'] ?? "",
-            style: const TextStyle(fontSize: 16, height: 1.5),
+          FormattedText(
+            text: data['Explicación'] ?? "",
+            baseStyle: const TextStyle(fontSize: 16, height: 1.5, color: Colors.white),
+            boldStyle: const TextStyle(fontSize: 16, height: 1.5, fontWeight: FontWeight.w900, color: Colors.yellowAccent),
           ),
         ],
       ),
     );
   }
 }
+
