@@ -1,0 +1,52 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper function to check if the user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    // Helper function to check if the user is accessing their own data
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // User profiles
+    match /users/{userId} {
+      allow read: if isAuthenticated(); // Users can read other profiles (needed for search)
+      allow create: if isOwner(userId); // Users can create their own profile
+      allow update: if isOwner(userId); // Users can update their own profile
+      allow delete: if isOwner(userId); // Users can delete their own profile
+    }
+    
+    // Player stats
+    match /players/{userId} {
+      allow read: if isAuthenticated();
+      allow create, update, delete: if isOwner(userId);
+    }
+    
+    // Friend relationships
+    match /friends/{friendshipId} {
+      allow read: if isAuthenticated();
+      // Solo el dueño de la relación (userId) puede crearla o eliminarla
+      allow create: if isOwner(request.resource.data.userId);
+      allow update, delete: if isOwner(resource.data.userId);
+    }
+    
+    // Friend requests
+    match /friendRequests/{requestId} {
+      allow read: if isAuthenticated();
+      // Solo quien envía puede crear la solicitud
+      allow create: if isOwner(request.resource.data.fromUserId);
+      // Tanto el remitente como el destinatario pueden actualizar (aceptar/rechazar) o borrar
+      allow update, delete: if isOwner(resource.data.fromUserId) || isOwner(resource.data.toUserId);
+    }
+    
+    // Practice history
+    match /practice_history/{historyId} {
+      allow read: if isOwner(resource.data.userId);
+      allow create: if isOwner(request.resource.data.userId);
+      allow delete: if isOwner(resource.data.userId);
+    }
+  }
+}

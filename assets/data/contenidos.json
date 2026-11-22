@@ -1,0 +1,898 @@
+{
+"Estructura_Curriculo":[
+ {
+  "Modulo_Titulo": "Diagnóstico",
+  "Seccion_Titulo": "Diagnóstico parte 1",
+  "Leccion_Titulo": "Pregunta: Tipos de Números",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 1
+ },
+ {
+  "Modulo_Titulo": "Diagnóstico",
+  "Seccion_Titulo": "Diagnóstico parte 1",
+  "Leccion_Titulo": "Pregunta: Jerarquía de Operaciones",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 2
+ },
+ {
+  "Modulo_Titulo": "Diagnóstico",
+  "Seccion_Titulo": "Diagnóstico parte 1",
+  "Leccion_Titulo": "Pregunta: Expresiones Algebraicas",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 3
+ },
+ {
+  "Modulo_Titulo": "Diagnóstico",
+  "Seccion_Titulo": "Diagnóstico parte 1",
+  "Leccion_Titulo": "Pregunta: Expresiones Algebraicas",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 4
+ },
+ {
+  "Modulo_Titulo": "Diagnóstico",
+  "Seccion_Titulo": "Diagnóstico parte 1",
+  "Leccion_Titulo": "Pregunta: Expresiones Algebraicas",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 5
+ },
+ {
+  "Modulo_Titulo": "Diagnóstico",
+  "Seccion_Titulo": "Diagnóstico parte 2",
+  "Leccion_Titulo": "Pregunta: Expresiones Algebraicas",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 6
+ },
+ {
+  "Modulo_Titulo": "Diagnóstico",
+  "Seccion_Titulo": "Diagnóstico parte 2",
+  "Leccion_Titulo": "Pregunta: Leyes de los exponentes",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 7
+ },
+ {
+  "Modulo_Titulo": "Diagnóstico",
+  "Seccion_Titulo": "Diagnóstico parte 2",
+  "Leccion_Titulo": "Pregunta: Jerarquía de Operaciones",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 8
+ },
+ {
+  "Modulo_Titulo": "Diagnóstico",
+  "Seccion_Titulo": "Diagnóstico parte 2",
+  "Leccion_Titulo": "Pregunta: Exponentes",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 9
+ },
+ {
+  "Modulo_Titulo": "Diagnóstico",
+  "Seccion_Titulo": "Diagnóstico parte 2",
+  "Leccion_Titulo": "Pregunta: Exponentes",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 10
+ },
+ {
+  "Modulo_Titulo": "Aritmética",
+  "Seccion_Titulo": "Tipos de números",
+  "Leccion_Titulo": "Video: Los tipos de números",
+  "Tipo_Leccion": "video",
+  "Recurso_ID": 1
+ },
+ {
+  "Modulo_Titulo": "Aritmética",
+  "Seccion_Titulo": "Tipos de números",
+  "Leccion_Titulo": "Clasifica! - Tipos de números",
+  "Tipo_Leccion": "clasificar",
+  "Recurso_ID": 1
+ },
+ {
+  "Modulo_Titulo": "Aritmética",
+  "Seccion_Titulo": "Leyes de los signos",
+  "Leccion_Titulo": "Video: Las leyes de los signos",
+  "Tipo_Leccion": "video",
+  "Recurso_ID": 2
+ },
+ {
+  "Modulo_Titulo": "Aritmética",
+  "Seccion_Titulo": "Leyes de los signos: Sumas y Restas",
+  "Leccion_Titulo": "Pregunta: Leyes de los signos - Sumas y restas",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 11
+ },
+ {
+  "Modulo_Titulo": "Aritmética",
+  "Seccion_Titulo": "Leyes de los signos: Sumas y Restas",
+  "Leccion_Titulo": "Pregunta: Leyes de los signos - Sumas y restas",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 12
+ },
+ {
+  "Modulo_Titulo": "Aritmética",
+  "Seccion_Titulo": "Leyes de los signos: Sumas y Restas",
+  "Leccion_Titulo": "Pregunta: Leyes de los signos - Sumas y restas",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 13
+ },
+ {
+  "Modulo_Titulo": "Aritmética",
+  "Seccion_Titulo": "Leyes de los signos: Sumas y Restas",
+  "Leccion_Titulo": "Pregunta: Leyes de los signos - Sumas y restas",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 14
+ },
+ {
+  "Modulo_Titulo": "Aritmética",
+  "Seccion_Titulo": "Leyes de los signos: Sumas y Restas",
+  "Leccion_Titulo": "Pregunta: Leyes de los signos - Sumas y restas",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 15
+ },
+ {
+  "Modulo_Titulo": "Aritmética",
+  "Seccion_Titulo": "Leyes de los signos: Sumas y Restas",
+  "Leccion_Titulo": "Pregunta: Leyes de los signos - Sumas y restas",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 16
+ },
+ {
+  "Modulo_Titulo": "Aritmética",
+  "Seccion_Titulo": "Leyes de los signos: Multiplicación y división",
+  "Leccion_Titulo": "Pregunta: Leyes de los signos - Multiplicación y división",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 17
+ },
+ {
+  "Modulo_Titulo": "Aritmética",
+  "Seccion_Titulo": "Leyes de los signos: Multiplicación y división",
+  "Leccion_Titulo": "Pregunta: Leyes de los signos - Multiplicación y división",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 18
+ },
+ {
+  "Modulo_Titulo": "Aritmética",
+  "Seccion_Titulo": "Leyes de los signos: Multiplicación y división",
+  "Leccion_Titulo": "Pregunta: Leyes de los signos - Multiplicación y división",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 19
+ },
+ {
+  "Modulo_Titulo": "Aritmética",
+  "Seccion_Titulo": "Leyes de los signos: Multiplicación y división",
+  "Leccion_Titulo": "Pregunta: Leyes de los signos - Multiplicación y división",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 20
+ },
+ {
+  "Modulo_Titulo": "Aritmética",
+  "Seccion_Titulo": "Leyes de los signos: Multiplicación y división",
+  "Leccion_Titulo": "Pregunta: Leyes de los signos - Multiplicación y división",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 21
+ },
+ {
+  "Modulo_Titulo": "Aritmética",
+  "Seccion_Titulo": "Leyes de los signos: Multiplicación y división",
+  "Leccion_Titulo": "Pregunta: Leyes de los signos - Multiplicación y división",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 22
+ },
+ {
+  "Modulo_Titulo": "Aritmética",
+  "Seccion_Titulo": "Jerarquía de operaciones",
+  "Leccion_Titulo": "Video: Jerarquía de operaciones",
+  "Tipo_Leccion": "video",
+  "Recurso_ID": 3
+ },
+ {
+  "Modulo_Titulo": "Aritmética",
+  "Seccion_Titulo": "Jerarquía de operaciones",
+  "Leccion_Titulo": "Clasifica! - Jerarquía de operaciones",
+  "Tipo_Leccion": "clasificar",
+  "Recurso_ID": 2
+ },
+ {
+  "Modulo_Titulo": "Aritmética",
+  "Seccion_Titulo": "Valoración de Aritmética",
+  "Leccion_Titulo": "Pregunta: Valoración de Aritmética",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 23
+ },
+ {
+  "Modulo_Titulo": "Aritmética",
+  "Seccion_Titulo": "Valoración de Aritmética",
+  "Leccion_Titulo": "Pregunta: Valoración de Aritmética",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 24
+ },
+ {
+  "Modulo_Titulo": "Aritmética",
+  "Seccion_Titulo": "Valoración de Aritmética",
+  "Leccion_Titulo": "Pregunta: Valoración de Aritmética",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 25
+ },
+ {
+  "Modulo_Titulo": "Aritmética",
+  "Seccion_Titulo": "Valoración de Aritmética",
+  "Leccion_Titulo": "Pregunta: Valoración de Aritmética",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 26
+ },
+ {
+  "Modulo_Titulo": "Aritmética",
+  "Seccion_Titulo": "Valoración de Aritmética",
+  "Leccion_Titulo": "Pregunta: Valoración de Aritmética",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 27
+ },
+ {
+  "Modulo_Titulo": "Aritmética",
+  "Seccion_Titulo": "Valoración de Aritmética",
+  "Leccion_Titulo": "Pregunta: Valoración de Aritmética",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 28
+ },
+ {
+  "Modulo_Titulo": "Introducción al álgebra",
+  "Leccion_Titulo": "Video: Introducción al álgebra",
+  "Tipo_Leccion": "video",
+  "Recurso_ID": 4
+ },
+ {
+  "Modulo_Titulo": "Expresiones Algebraicas",
+  "Seccion_Titulo": "Expresiones Algebraicas",
+  "Leccion_Titulo": "Video: Expresiones Algebraicas",
+  "Tipo_Leccion": "video",
+  "Recurso_ID": 5
+ },
+ {
+  "Modulo_Titulo": "Expresiones Algebraicas",
+  "Seccion_Titulo": "Expresiones Algebraicas",
+  "Leccion_Titulo": "Clasifica! - Expresiones Algebraicas (Polinomios)",
+  "Tipo_Leccion": "clasificar",
+  "Recurso_ID": 3
+ },
+ {
+  "Modulo_Titulo": "Expresiones Algebraicas",
+  "Seccion_Titulo": "Términos semejantes",
+  "Leccion_Titulo": "Video: Términos semejantes",
+  "Tipo_Leccion": "video",
+  "Recurso_ID": 6
+ },
+ {
+  "Modulo_Titulo": "Expresiones Algebraicas",
+  "Seccion_Titulo": "Términos semejantes",
+  "Leccion_Titulo": "Relaciona! Términos semejantes",
+  "Tipo_Leccion": "relacionar",
+  "Recurso_ID": 1
+ },
+ {
+  "Modulo_Titulo": "Expresiones Algebraicas",
+  "Seccion_Titulo": "Valoración",
+  "Leccion_Titulo": "Pregunta: Valoración de Expresiones Algebraicas",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 29
+ },
+ {
+  "Modulo_Titulo": "Expresiones Algebraicas",
+  "Seccion_Titulo": "Valoración",
+  "Leccion_Titulo": "Pregunta: Valoración de Expresiones Algebraicas",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 30
+ },
+ {
+  "Modulo_Titulo": "Expresiones Algebraicas",
+  "Seccion_Titulo": "Valoración",
+  "Leccion_Titulo": "Pregunta: Valoración de Expresiones Algebraicas",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 31
+ },
+ {
+  "Modulo_Titulo": "Expresiones Algebraicas",
+  "Seccion_Titulo": "Valoración",
+  "Leccion_Titulo": "Pregunta: Valoración de Expresiones Algebraicas",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 32
+ },
+ {
+  "Modulo_Titulo": "Expresiones Algebraicas",
+  "Seccion_Titulo": "Valoración",
+  "Leccion_Titulo": "Pregunta: Valoración de Expresiones Algebraicas",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 33
+ },
+ {
+  "Modulo_Titulo": "Expresiones Algebraicas",
+  "Seccion_Titulo": "Valoración",
+  "Leccion_Titulo": "Pregunta: Valoración de Expresiones Algebraicas",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 34
+ },
+ {
+  "Modulo_Titulo": "Retroalimentación",
+  "Seccion_Titulo": "Retroalimentación: parte 1",
+  "Leccion_Titulo": "Pregunta: Retroalimentación",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 35
+ },
+ {
+  "Modulo_Titulo": "Retroalimentación",
+  "Seccion_Titulo": "Retroalimentación: parte 1",
+  "Leccion_Titulo": "Pregunta: Retroalimentación",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 36
+ },
+ {
+  "Modulo_Titulo": "Retroalimentación",
+  "Seccion_Titulo": "Retroalimentación: parte 1",
+  "Leccion_Titulo": "Pregunta: Retroalimentación",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 37
+ },
+ {
+  "Modulo_Titulo": "Retroalimentación",
+  "Seccion_Titulo": "Retroalimentación: parte 1",
+  "Leccion_Titulo": "Pregunta: Retroalimentación",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 38
+ },
+ {
+  "Modulo_Titulo": "Retroalimentación",
+  "Seccion_Titulo": "Retroalimentación: parte 1",
+  "Leccion_Titulo": "Pregunta: Retroalimentación",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 39
+ },
+ {
+  "Modulo_Titulo": "Retroalimentación",
+  "Seccion_Titulo": "Retroalimentación: parte 2",
+  "Leccion_Titulo": "Pregunta: Retroalimentación",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 40
+ },
+ {
+  "Modulo_Titulo": "Retroalimentación",
+  "Seccion_Titulo": "Retroalimentación: parte 2",
+  "Leccion_Titulo": "Pregunta: Retroalimentación",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 41
+ },
+ {
+  "Modulo_Titulo": "Retroalimentación",
+  "Seccion_Titulo": "Retroalimentación: parte 2",
+  "Leccion_Titulo": "Pregunta: Retroalimentación",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 42
+ },
+ {
+  "Modulo_Titulo": "Retroalimentación",
+  "Seccion_Titulo": "Retroalimentación: parte 2",
+  "Leccion_Titulo": "Pregunta: Retroalimentación",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 43
+ },
+ {
+  "Modulo_Titulo": "Retroalimentación",
+  "Seccion_Titulo": "Retroalimentación: parte 2",
+  "Leccion_Titulo": "Pregunta: Retroalimentación",
+  "Tipo_Leccion": "pregunta",
+  "Recurso_ID": 44
+ }
+],
+"Recursos_Video":[
+ {
+  "Id": 1,
+  "Tema": "LOS TIPOS DE NÚMEROS",
+  "Explicación": "Existen muchos tipos de números, pero se agrupan así:\\nNaturales (N) van del 0 al infinito.\\nEnteros (Z) : positivos y negativos.\\nRacionales (Q): fracciones y decimales exactos.\\nIrracionales (I) no pueden escribirse de forma exacta, como π, e o √3.\\nReales: todos los anteriores..."
+ },
+ {
+  "Id": 2,
+  "Tema": "LEYES DE LOS SIGNOS",
+  "Explicación": "Nos dicen cómo se comportan los números positivos y negativos al multiplicarse o dividirse. \\nSi los signos son iguales, el resultado es positivo. \\nSi son distintos, el resultado es negativo. \\nPermiten resolver operaciones en orden al trabajar con números enteros."
+ },
+ {
+  "Id": 3,
+  "Tema": "JERARQUÍA DE OPERACIONES",
+  "Explicación": "Para resolver una operación correctamente se sigue este orden: primero los signos de agrupación, luego potencias y raíces, después multiplicación y división, y al final suma y resta."
+ },
+ {
+  "Id": 4,
+  "Tema": "EL ÁLGEBRA",
+  "Explicación": "Es una rama de las matemáticas que usa símbolos y letras para representar valores desconocidos y describir operaciones. Esta misma es útil en la vida diaria para administrar dinero, cocinar, ahorrar y fortalecer el pensamiento lógico."
+ },
+ {
+  "Id": 5,
+  "Tema": "EXPRESIONES ALGEBRAICAS",
+  "Explicación": "Es una combinación de números (constantes) y variables unidas por operaciones. \\nSe usa para representar relaciones matemáticas."
+ },
+ {
+  "Id": 6,
+  "Tema": "TÉRMINOS SEMEJANTES",
+  "Explicación": "Comparten la misma parte literal y el mismo exponente. \\nSi uno es diferente, no son semejantes. \\nEjemplo:\\nSI: - 5x² y x² \\nNO:  x² y x."
+ }
+],
+"Recursos_Preguntas":[
+ {
+  "Id": 1,
+  "Pregunta": "¿Cuál de las siguientes afirmaciones es correcta según las **leyes de los signos?**",
+  "Opcion_1": "(+) (+) = (+)",
+  "Opcion_2": "(+) (-) = (+)",
+  "Opcion_3": "(-) (-) = (-)",
+  "Opcion_4": "Los signos no importan",
+  "Respuesta_Correcta_Texto": "(+) (+) = (+)",
+  "Retroalimentacion": "Las leyes de los signos en la multiplicación y división establecen que el producto de signos iguales es positivo."
+ },
+ {
+  "Id": 2,
+  "Pregunta": "¿Para qué nos sirve la **jerarquía de operaciones** al momento de resolver una ecuación algebráica?",
+  "Opcion_1": "Multiplicar números grandes",
+  "Opcion_2": "Sumar más rápido",
+  "Opcion_3": "Tener el orden correcto para resolver una ecuación",
+  "Opcion_4": "Restar el primero",
+  "Respuesta_Correcta_Texto": "Tener el orden correcto para resolver una ecuación",
+  "Retroalimentacion": "La jerarquía de operaciones garantiza que cualquier persona obtenga el mismo resultado al seguir el orden de las operaciones."
+ },
+ {
+  "Id": 3,
+  "Pregunta": "Un **monomio** es:",
+  "Opcion_1": "Una expresión con 2 términos",
+  "Opcion_2": "Una expresión con 1 solo término",
+  "Opcion_3": "Una expresión con 3 términos",
+  "Opcion_4": "Una suma de varios términos",
+  "Respuesta_Correcta_Texto": "Una expresión con 1 solo término",
+  "Retroalimentacion": "Un monomio es una expresión algebraica compuesta por un solo término, como 5x² o -3y."
+ },
+ {
+  "Id": 4,
+  "Pregunta": "Un **binomio** es...",
+  "Opcion_1": "Una expresión con 2 términos",
+  "Opcion_2": "Una expresión con 1 solo término",
+  "Opcion_3": "Una expresión con 3 términos",
+  "Opcion_4": "Una suma de varios términos",
+  "Respuesta_Correcta_Texto": "Una expresión con 2 términos",
+  "Retroalimentacion": "Un binomio es un polinomio compuesto por la suma o resta de dos términos, como a+b o x2−4."
+ },
+ {
+  "Id": 5,
+  "Pregunta": "Un **trinomio** es...",
+  "Opcion_1": "Una expresión con 2 términos",
+  "Opcion_2": "Una expresión con 1 solo término",
+  "Opcion_3": "Una expresión con 3 términos",
+  "Opcion_4": "Una suma infinita",
+  "Respuesta_Correcta_Texto": "Una expresión con 3 términos",
+  "Retroalimentacion": "Un trinomio es un polinomio compuesto por la suma o resta de tres términos, como ax2+bx+c."
+ },
+ {
+  "Id": 6,
+  "Pregunta": "Un **polinomio** es... ",
+  "Opcion_1": "Una expresión con 2 términos",
+  "Opcion_2": "Una expresión con 1 solo término",
+  "Opcion_3": "Una expresión con 3 términos",
+  "Opcion_4": "Una expresión con varios términos",
+  "Respuesta_Correcta_Texto": "Una expresión con varios términos",
+  "Retroalimentacion": "Un polinomio es una expresión algebraica formada por la suma o resta de uno o varios monomios (términos)."
+ },
+ {
+  "Id": 7,
+  "Pregunta": "¿Cuál de las siguientes afirmaciones es correcta según las **leyes de exponentes**?",
+  "Opcion_1": "Se *suman* los exponentes cuando se multiplican potencias con la *misma base*",
+  "Opcion_2": "Se restan los *exponentes* siempre",
+  "Opcion_3": "Los *exponentes* no cambian",
+  "Opcion_4": "Solo sirven para *números enteros*",
+  "Respuesta_Correcta_Texto": "Se *suman* los exponentes cuando se multiplican potencias con la *misma base*",
+  "Retroalimentacion": "Una de las leyes fundamentales establece que al multiplicar potencias con la misma base, se mantiene la base y se suman los exponentes: xa⋅xb=xa+b."
+ },
+ {
+  "Id": 8,
+  "Pregunta": "La **jerarquía de operaciones** indica que primero se deben resolver…",
+  "Opcion_1": "Las sumas y restas",
+  "Opcion_2": "Los paréntesis y potencias",
+  "Opcion_3": "Los números más grandes",
+  "Opcion_4": "Todo al mismo tiempo",
+  "Respuesta_Correcta_Texto": "Los paréntesis y potencias",
+  "Retroalimentacion": "La jerarquía de operaciones (PEMDAS\/BODMAS) establece que los paréntesis y potencias (exponentes) se resuelven antes que la multiplicación, división, suma y resta."
+ },
+ {
+  "Id": 9,
+  "Pregunta": "Un **exponente** indica:",
+  "Opcion_1": "El signo del número",
+  "Opcion_2": "Cuántas veces se suma la base",
+  "Opcion_3": "Cuántas veces se divide la base",
+  "Opcion_4": "Cuántas veces se multiplica la base por sí misma",
+  "Respuesta_Correcta_Texto": "Cuántas veces se suma la base",
+  "Retroalimentacion": "El exponente indica cuántas veces se debe multiplicar la base por sí misma. Por ejemplo, en 23, la base 2 se multiplica 3 veces (2×2×2)."
+ },
+ {
+  "Id": 10,
+  "Pregunta": "Si tienes una multiplicación de la misma base **(x² ⋅ x³)**, ¿qué debes hacer con los **exponentes** (el 2 y el 3)?",
+  "Opcion_1": "Dejarlos igual",
+  "Opcion_2": "Sumarlos \\n(2+3)",
+  "Opcion_3": "Restarlos \\n(2-3)",
+  "Opcion_4": "Multiplicarlos \\n(2×3)",
+  "Respuesta_Correcta_Texto": "Sumarlos \\n(2+3)",
+  "Retroalimentacion": "Para multiplicar bases iguales, se conserva la base y se suman los exponentes. Así, x2⋅x3=x2+3=x5."
+ },
+ {
+  "Id": 11,
+  "Pregunta": "(-6) + (-7)",
+  "Opcion_1": -13,
+  "Opcion_2": 1,
+  "Respuesta_Correcta_Texto": -13,
+  "Retroalimentacion": "Cuando sumas dos números con el mismo signo (ambos negativos), sumas los números y mantienes el signo negativo: −6−7=−13."
+ },
+ {
+  "Id": 12,
+  "Pregunta": "(-12) - (+7)",
+  "Opcion_1": -19,
+  "Opcion_2": -5,
+  "Respuesta_Correcta_Texto": -19,
+  "Retroalimentacion": "El menos antes del paréntesis hace que el +7 se vuelva −7. Entonces sumas los negativos: −12−7=−19."
+ },
+ {
+  "Id": 13,
+  "Pregunta": "(-3) + (-9)",
+  "Opcion_1": -12,
+  "Opcion_2": 6,
+  "Respuesta_Correcta_Texto": -12,
+  "Retroalimentacion": "Cuando sumas dos números con el mismo signo (ambos negativos), sumas los números y mantienes el signo negativo: −3−9=−12."
+ },
+ {
+  "Id": 14,
+  "Pregunta": "(+15) - (-9)",
+  "Opcion_1": 24,
+  "Opcion_2": 6,
+  "Respuesta_Correcta_Texto": 24,
+  "Retroalimentacion": "El menos antes del paréntesis hace que el −9 se vuelva +9. Entonces sumas: 15+9=24."
+ },
+ {
+  "Id": 15,
+  "Pregunta": "(-8) + (-4)",
+  "Opcion_1": -12,
+  "Opcion_2": -4,
+  "Respuesta_Correcta_Texto": -12,
+  "Retroalimentacion": "Cuando sumas dos números con el mismo signo (ambos negativos), sumas los números y mantienes el signo negativo: −8−4=−12."
+ },
+ {
+  "Id": 16,
+  "Pregunta": "(-7) - (+20)",
+  "Opcion_1": -27,
+  "Opcion_2": 13,
+  "Respuesta_Correcta_Texto": -27,
+  "Retroalimentacion": "El menos antes del paréntesis hace que el +20 se vuelva −20. Entonces sumas los negativos: −7−20=−27."
+ },
+ {
+  "Id": 17,
+  "Pregunta": "(-8) × (+3)",
+  "Opcion_1": -24,
+  "Opcion_2": 24,
+  "Respuesta_Correcta_Texto": -24,
+  "Retroalimentacion": "Para la multiplicación, signos diferentes (menos por más) siempre dan resultado negativo. (−8)×(+3)=−24."
+ },
+ {
+  "Id": 18,
+  "Pregunta": "(-10) × (-2)",
+  "Opcion_1": 20,
+  "Opcion_2": -20,
+  "Respuesta_Correcta_Texto": 20,
+  "Retroalimentacion": "Para la multiplicación, signos iguales (menos por menos) siempre dan resultado positivo. (−10)×(−2)=+20."
+ },
+ {
+  "Id": 19,
+  "Pregunta": "(-40) ÷ (+10)",
+  "Opcion_1": -4,
+  "Opcion_2": 4,
+  "Respuesta_Correcta_Texto": -4,
+  "Retroalimentacion": "Para la división, signos diferentes (menos entre más) siempre dan resultado negativo. (−40)÷(+10)=−4."
+ },
+ {
+  "Id": 20,
+  "Pregunta": "(-18) ÷ (-9)",
+  "Opcion_1": 2,
+  "Opcion_2": -2,
+  "Respuesta_Correcta_Texto": 2,
+  "Retroalimentacion": "Para la división, signos iguales (menos entre menos) siempre dan resultado positivo. (−18)÷(−9)=+2."
+ },
+ {
+  "Id": 21,
+  "Pregunta": "(+5) x (+4)",
+  "Opcion_1": 20,
+  "Opcion_2": -20,
+  "Respuesta_Correcta_Texto": 20,
+  "Retroalimentacion": "Para la multiplicación, signos iguales (más por más) siempre dan resultado positivo. (+5)×(+4)=+20."
+ },
+ {
+  "Id": 22,
+  "Pregunta": "(+30) ÷ (-6)",
+  "Opcion_1": -5,
+  "Opcion_2": 5,
+  "Respuesta_Correcta_Texto": -5,
+  "Retroalimentacion": "Para la división, signos diferentes (más entre menos) siempre dan resultado negativo. (+30)÷(−6)=−5."
+ },
+ {
+  "Id": 23,
+  "Pregunta": "¿Cuál es el resultado de la siguiente multiplicación? \\n(−4)(+5)",
+  "Opcion_1": 20,
+  "Opcion_2": 1,
+  "Opcion_3": -20,
+  "Opcion_4": 9,
+  "Respuesta_Correcta_Texto": -20,
+  "Retroalimentacion": "Multiplicamos los números: 4×5=20. Para los signos, si son diferentes (menos por más), el resultado es negativo: −20."
+ },
+ {
+  "Id": 24,
+  "Pregunta": "¿Qué operación se realiza primero en 5÷3+2?",
+  "Opcion_1": "3+2",
+  "Opcion_2": "2÷5",
+  "Opcion_3": "5÷3",
+  "Opcion_4": "Todo al mismo tiempo",
+  "Respuesta_Correcta_Texto": "5÷3",
+  "Retroalimentacion": "Según la jerarquía de operaciones, la división (5÷3) siempre se resuelve antes que la suma (+2)."
+ },
+ {
+  "Id": 25,
+  "Pregunta": "Al resolver esta suma (−10)÷(−2) el resultado es:",
+  "Opcion_1": 5,
+  "Opcion_2": 0,
+  "Opcion_3": 12,
+  "Opcion_4": -18,
+  "Respuesta_Correcta_Texto": 5,
+  "Retroalimentacion": "Dividimos los números: 10÷2=5. Para los signos, si son iguales (menos entre menos), el resultado es positivo: +5."
+ },
+ {
+  "Id": 26,
+  "Pregunta": "¿Cuál de los siguientes números es irracional?",
+  "Opcion_1": 5,
+  "Opcion_2": 2.5,
+  "Opcion_3": 0,
+  "Opcion_4": "√3",
+  "Respuesta_Correcta_Texto": "√3",
+  "Retroalimentacion": "Un número irracional es aquel que no puede escribirse como una fracción exacta. La raíz cuadrada de 3 es un ejemplo, ya que tiene decimales infinitos y no periódicos."
+ },
+ {
+  "Id": 27,
+  "Pregunta": "¿Qué tipo de número es −2?",
+  "Opcion_1": "Irracional",
+  "Opcion_2": "Entero",
+  "Opcion_3": "Decimal exacto",
+  "Opcion_4": "Natural",
+  "Respuesta_Correcta_Texto": "Entero",
+  "Retroalimentacion": "El −2 es un número entero. Los números enteros incluyen todos los números positivos y negativos que no tienen decimales, incluyendo el cero."
+ },
+ {
+  "Id": 28,
+  "Pregunta": "¿Qué operación se realiza primero en 2+3×4?",
+  "Opcion_1": "2+3",
+  "Opcion_2": "4÷2",
+  "Opcion_3": "3×4",
+  "Opcion_4": "Todo al mismo tiempo",
+  "Respuesta_Correcta_Texto": "3×4",
+  "Retroalimentacion": "Según la jerarquía, la multiplicación (3×4) se resuelve siempre antes que la suma (2+)."
+ },
+ {
+  "Id": 29,
+  "Pregunta": "¿Cuál de las siguientes expresiones algebraicas es un **monomio**?",
+  "Opcion_1": "x+y",
+  "Opcion_2": "a+b+c",
+  "Opcion_3": "−5x²y³",
+  "Opcion_4": "3x²−1",
+  "Respuesta_Correcta_Texto": "−5x²y³",
+  "Retroalimentacion": "Un monomio es una expresión que consta de un solo término. La opción −5x2y3 es un solo término porque no tiene sumas o restas que lo separen."
+ },
+ {
+  "Id": 30,
+  "Pregunta": "Clasifica la siguiente expresión según su número de términos: 3a−2b",
+  "Opcion_1": "Monomio",
+  "Opcion_2": "Binomio",
+  "Opcion_3": "Términos semejantes",
+  "Opcion_4": "Trinomio",
+  "Respuesta_Correcta_Texto": "Binomio",
+  "Retroalimentacion": "La expresión 3a−2b está separada por un signo de resta (el menos). Por lo tanto, tiene dos términos (3a y −2b), lo que la convierte en un Binomio."
+ },
+ {
+  "Id": 31,
+  "Pregunta": "¿Como se puede saber cuándo dos términos son **semejantes**?",
+  "Opcion_1": "Tienen el mismo número",
+  "Opcion_2": "Tienen el mismo exponente en la misma parte literal",
+  "Opcion_3": "Tienen la misma parte literal",
+  "Opcion_4": "Son completamente iguales",
+  "Respuesta_Correcta_Texto": "Tienen el mismo exponente en la misma parte literal",
+  "Retroalimentacion": "Los términos son semejantes si tienen la misma parte literal (las mismas letras) elevadas a los mismos exponentes. El número que acompaña (el coeficiente) no tiene que ser igual."
+ },
+ {
+  "Id": 32,
+  "Pregunta": "¿Cuál de estas opciones es **término semejante** de 3x?",
+  "Opcion_1": "3y",
+  "Opcion_2": "3x²",
+  "Opcion_3": 0,
+  "Opcion_4": "10x",
+  "Respuesta_Correcta_Texto": "10x",
+  "Retroalimentacion": "Para que sea término semejante de 3x, debe tener la misma parte literal, que es solo 'x' (con exponente 1). El término 10x cumple esta condición."
+ },
+ {
+  "Id": 33,
+  "Pregunta": "¿Cuántos *términos* tiene esta expresión 5x−2?",
+  "Opcion_1": "3 términos",
+  "Opcion_2": "1 término",
+  "Opcion_3": "Ninguno",
+  "Opcion_4": "2 términos",
+  "Respuesta_Correcta_Texto": "2 términos",
+  "Retroalimentacion": "La expresión 5x−2 está separada por el signo de resta. El primer término es 5x y el segundo término es −2. Por lo tanto, tiene 2 términos."
+ },
+ {
+  "Id": 34,
+  "Pregunta": "Si tienes 2 manzanas y le sumas 3 manzanas, obtienes 5 manzanas. En álgebra sería: 2m+3m=5m. *¿Por qué pudimos sumarlos?*",
+  "Opcion_1": "Porque son términos semejantes (ambos son \"m\")",
+  "Opcion_2": "No se puede",
+  "Opcion_3": "Porque 2 y 3 son pequeños",
+  "Opcion_4": "Por que no hubo más manzanas",
+  "Respuesta_Correcta_Texto": "Porque son términos semejantes (ambos son \"m\")",
+  "Retroalimentacion": "Solo puedes sumar o restar términos si son semejantes. En este caso, 2m y 3m son semejantes porque ambos tienen la misma parte literal ('m')."
+ },
+ {
+  "Id": 35,
+  "Pregunta": "¿Qué *tipo de número* es raíz cuadrada de 2​?",
+  "Opcion_1": "Números racionales",
+  "Opcion_2": "Números irracionales",
+  "Opcion_3": "Números naturales",
+  "Opcion_4": "Números enteros",
+  "Respuesta_Correcta_Texto": "Números irracionales",
+  "Retroalimentacion": "Raíz cuadrada de 2 no se puede expresar como una fracción simple porque tiene decimales infinitos y no repetitivos (no periódicos). Por ello, es un número irracional."
+ },
+ {
+  "Id": 36,
+  "Pregunta": "Que **resultado** obtenemos al multiplicar (−5)(8)",
+  "Opcion_1": -40,
+  "Opcion_2": 40,
+  "Opcion_3": -13,
+  "Opcion_4": 3,
+  "Respuesta_Correcta_Texto": -40,
+  "Retroalimentacion": "Multiplicamos los números: 5×8=40. En la multiplicación, si los signos son diferentes (menos por más), el resultado es negativo: −40."
+ },
+ {
+  "Id": 37,
+  "Pregunta": "¿Qué el lo primero que se tiene que hacer en esta operación 3+4÷2 respetando la **jerarquía de operaciones**?",
+  "Opcion_1": "Es 0",
+  "Opcion_2": "Todo al mismo tiempo",
+  "Opcion_3": "La suma (3+4)",
+  "Opcion_4": "La división (4÷2)",
+  "Respuesta_Correcta_Texto": "La división (4÷2)",
+  "Retroalimentacion": "La jerarquía de operaciones indica que la división (÷) y la multiplicación (×) deben resolverse antes que la suma (+) y la resta (−). Por lo tanto, se hace primero la división (4÷2)."
+ },
+ {
+  "Id": 38,
+  "Pregunta": "¿Cuál de los siguientes números es un número **entero (N)**?",
+  "Opcion_1": 3.5,
+  "Opcion_2": "2÷3",
+  "Opcion_3": -4,
+  "Opcion_4": "π",
+  "Respuesta_Correcta_Texto": -4,
+  "Retroalimentacion": "Los números enteros incluyen los números positivos, negativos y el cero, siempre que no tengan decimales ni sean fracciones. El único que cumple esto es el −4."
+ },
+ {
+  "Id": 39,
+  "Pregunta": "Resuelve la operación aplicando **ley de signos** para la resta: −8−(−6)",
+  "Opcion_1": -2,
+  "Opcion_2": 48,
+  "Opcion_3": -14,
+  "Opcion_4": -24,
+  "Respuesta_Correcta_Texto": -2,
+  "Retroalimentacion": "Al restar un número negativo, el doble signo menos se convierte en un signo más: −8−(−6)=−8+6. Luego, se resta el mayor menos el menor y se mantiene el signo del número más grande: −(8−6)=−2."
+ },
+ {
+  "Id": 40,
+  "Pregunta": "¿En esta operación que es lo primero que se debe realizar 20−2³?",
+  "Opcion_1": "20-2",
+  "Opcion_2": "3×2",
+  "Opcion_3": "20-3",
+  "Opcion_4": "2³",
+  "Respuesta_Correcta_Texto": "2³",
+  "Retroalimentacion": "Según la jerarquía de operaciones, las potencias (23) se resuelven antes que la resta (20−). La operación es 23=2×2×2=8."
+ },
+ {
+  "Id": 41,
+  "Pregunta": "Clasifica la siguiente **expresión algebraica** según su número de términos: 3x2−5y+8",
+  "Opcion_1": "Monomio",
+  "Opcion_2": "Binomio",
+  "Opcion_3": "Trinomio",
+  "Opcion_4": "Polinomio",
+  "Respuesta_Correcta_Texto": "Trinomio",
+  "Retroalimentacion": "La expresión tiene tres términos separados por signos de suma o resta (3x2, −5y, +8). Una expresión con tres términos se llama Trinomio."
+ },
+ {
+  "Id": 42,
+  "Pregunta": "¿Identifica el término semejante a 6a²b?",
+  "Opcion_1": "6ab²",
+  "Opcion_2": "a²b²",
+  "Opcion_3": "6a³",
+  "Opcion_4": "−2a²b",
+  "Respuesta_Correcta_Texto": "−2a²b",
+  "Retroalimentacion": "Un término semejante debe tener las mismas letras con los mismos exponentes: a al cuadrado (a2) y b a la uno (b1). El término −2a2b es semejante."
+ },
+ {
+  "Id": 43,
+  "Pregunta": "¿Cuál de las siguientes opciones muestra un par de **Términos semejantes**?",
+  "Opcion_1": "2x², 2x³",
+  "Opcion_2": "-3xy², 7xy²",
+  "Opcion_3": "4ab, 4a",
+  "Opcion_4": "5x, 5y",
+  "Respuesta_Correcta_Texto": "-3xy², 7xy²",
+  "Retroalimentacion": "Los términos semejantes deben tener la misma parte literal (xy2). Solo el par −3xy2 y 7xy2 cumple con esta condición, sin importar sus coeficientes (los números −3 y 7)."
+ },
+ {
+  "Id": 44,
+  "Pregunta": "¿Por qué 5x y 5x2 NO son **términos semejantes**?",
+  "Opcion_1": "Por que uno es par y el otro impar",
+  "Opcion_2": "Por que tiene coeficientes iguales",
+  "Opcion_3": "Por que la variable x tiene diferente exponente",
+  "Opcion_4": "Son términos semejantes",
+  "Respuesta_Correcta_Texto": "Por que la variable x tiene diferente exponente",
+  "Retroalimentacion": "Para ser semejantes, las letras deben tener el mismo exponente. En 5x, el exponente de x es 1, y en 5x2, el exponente de x es 2. Por lo tanto, la variable x tiene diferente exponente."
+ }
+],
+"Recursos_Relacionar":[
+ {
+  "Id": 1,
+  "Instruccion": "Relaciona los términos semejantes",
+  "Columna_Izquierda": "21x²; 4a³b²; 5x²y; p⁵q; -2x³",
+  "Columna_Derecha": "-x²; -2a³b²; 8yx²; 3qp⁵; 41x³",
+  "Pares_Correctos": "21x²:-x²; 4a³b²:-2a³b²; 5x²y:8yx²; p⁵q:3qp⁵; -2x³:41x³",
+  "Retroalimentacion": "Recuerda que los **términos semejantes** deben tener las *mismas letras* y los *mismos exponentes*, sin importar el orden de estas letras o el número antes de ellas."
+ },
+ {
+  "Id": 2,
+  "Instruccion": "Relaciona los términos semejantes",
+  "Columna_Izquierda": "10a²b⁵; 3x⁴z; -7m³n; 15xy³; -wz²",
+  "Columna_Derecha": "-a²b⁵; 9zx⁴; 12m³n; 4y³x; 6z²w",
+  "Pares_Correctos": "10a²b⁵:-a²b⁵; 3x⁴z:9zx⁴; -7m³n:12m³n; 15xy³:4y³x; -wz²:6z²w",
+  "Retroalimentacion": "Recuerda que los **términos semejantes** deben tener las *mismas letras* y los *mismos exponentes*, sin importar el orden de estas letras o el número antes de ellas."
+ }
+],
+"Recursos_Clasificar":[
+ {
+  "Id": 1,
+  "Instruccion": "Selecciona la última y mas específica categoría a la que pertenece el número",
+  "Categorias": "N (Naturales); Z (Enteros); Q (Racionales); I (Irracionales)",
+  "Items": "5÷2; -14; 1÷5; 1; √2; -3; 5; 3; -5",
+  "Clasificacion_Correcta": "N (Naturales): 1, 5, 3; Z (Enteros): -14, -3, -5; Q (Racionales): 5÷2, 1÷5; I (Irracionales): √2",
+  "Retroalimentacion": "1: Es un número entero positivo utilizado para contar. No es Z (específico) porque es positivo, ni Q o I porque no tiene parte decimal.; 5: Es un entero positivo básico. Aunque técnicamente es entero y racional, Natural es su origen más simple y específico.; 3: Es un número de conteo positivo. Al no tener signo negativo ni decimales, su lugar es N.; -14: Es un número completo (sin decimales) pero es negativo, lo que lo excluye de los Naturales.; -3: Al ser un valor negativo exacto, sale de los Naturales y se queda en Z. No es Q porque no requiere ser una fracción.; -5: Es un número entero por debajo de cero. Su categoría más precisa es Z porque no es un número de conteo natural.; 5÷2: El resultado es 2.5. Al tener un decimal exacto, no puede ser N ni Z. Es Racional porque nace de una fracción.; 1÷5: El resultado es 0.2. Al ser un decimal finito, es Q. No es I porque sus decimales no son infinitos ni caóticos.; √2: Su valor es 1.4142... con decimales infinitos que nunca se repiten. No puede escribirse como una fracción exacta, por lo que no es Q, Z ni N."
+ },
+ {
+  "Id": 2,
+  "Instruccion": "Selecciona la última y mas específica categoría a la que pertenece el número",
+  "Categorias": "N (Naturales); Z (Enteros); Q (Racionales); I (Irracionales)",
+  "Items": "2.5; π; -1; 5.31; -2; 4÷3; 0; √3; -4÷3",
+  "Clasificacion_Correcta": "N (Naturales): 0; Z (Enteros): -1, -2; Q (Racionales): 2.5, 5.31, 4÷3, -4÷3; I (Irracionales): π, √3",
+  "Retroalimentacion": "0: Es el origen de los números naturales y representa la ausencia de cantidad, por lo que su categoría más básica y específica es N; -1: Es un número exacto sin parte decimal pero con signo negativo, lo que lo sitúa en Z al no ser un número de conteo positivo; -2: Al ser un entero negativo, queda excluido de los naturales y su clasificación más precisa es Z; 2.5: Es un número con decimales finitos que puede expresarse como la fracción 5\/2, lo que lo define como Q y lo excluye de ser un entero; 5.31: Representa un valor decimal exacto que no es un número entero, por lo tanto, pertenece a la categoría de los racionales Q; 4÷3: Esta división genera un decimal periódico infinito (1.333...), el cual puede representarse como fracción, clasificándolo como Q; -4÷3: Al igual que su versión positiva, es una razón entre dos enteros que da un decimal periódico, por lo que su lugar es Q; π: Es un número trascendente con decimales infinitos que no siguen un patrón periódico, lo que impide que sea una fracción y lo define como I; √3: Es una raíz no exacta cuyo valor decimal es infinito y no periódico (1.732...), motivo por el cual pertenece estrictamente a los irracionales I."
+ },
+ {
+  "Id": 3,
+  "Instruccion": "Selecciona qué operación se realiza primero según la jerarquía de operaciones",
+  "Categorias": "Paréntesis, corchetes y llaves; Raíces y exponentes; División y multiplicación; Sumas y restas",
+  "Items": "5 x 4² + 7 - 3 x √36 ÷ 2 + 10; 12 - [20 ÷ 4 + (3 x 5 - 7)]; 15 + 6 x 3 - 24 ÷ 8; 4x² - 3x + 5(2x - x²) + 1; 23 + 4 - 10 + 7 - 13 + 5",
+  "Clasificacion_Correcta": "Paréntesis, corchetes y llaves: 12 - [20 ÷ 4 + (3 x 5 - 7)]; Raíces y exponentes: 5 x 4² + 7 - 3 x √36 ÷ 2 + 10; División y multiplicación: 15 + 6 x 3 - 24 ÷ 8; Sumas y restas: 23 + 4 - 10 + 7 - 13 + 5; Álgebra (Agrupación de términos): 4x² - 3x + 5(2x - x²) + 1",
+  "Retroalimentacion": "12 - [20 ÷ 4 + (3 x 5 - 7)]: Se clasifica aquí porque los signos de agrupación (paréntesis y corchetes) dictan qué se debe resolver primero antes de cualquier otra operación.; 5 x 4² + 7 - 3 x √36 ÷ 2 + 10: Pertenece a esta categoría porque, tras los paréntesis, el exponente (4²) y la raíz (√36) son los elementos con mayor jerarquía.; 15 + 6 x 3 - 24 ÷ 8: Su prioridad principal son los productos y cocientes, los cuales deben ejecutarse de izquierda a derecha antes de tocar las sumas.; 23 + 4 - 10 + 7 - 13 + 5: Es la categoría más básica, ya que solo presenta operaciones de último nivel que se resuelven simplemente en el orden en que aparecen.; 4x² - 3x + 5(2x - x²) + 1: Aunque tiene paréntesis, su objetivo final es la reducción de términos semejantes de distintas potencias, siendo una estructura algebraica mixta."
+ },
+ {
+  "Id": 4,
+  "Instruccion": "Selecciona qué operación se realiza primero según la jerarquía de operaciones",
+  "Categorias": "Paréntesis, corchetes y llaves; Raíces y exponentes; División y multiplicación; Sumas y restas",
+  "Items": "18 ÷ √8 + 4² - 10 + 2 x 5; 100 - 4³ + √25 x 2; 15 - 7 + 4 - 2 + 10; 6 + 2 x 5; 5 x (8 - 3)² + 10 ÷ 2",
+  "Clasificacion_Correcta": "Paréntesis, corchetes y llaves: 5 x (8 - 3)² + 10 ÷ 2; Raíces y exponentes: 18 ÷ √8 + 4² - 10 + 2 x 5, 100 - 4³ + √25 x 2; División y multiplicación: 6 + 2 x 5; Sumas y restas: 15 - 7 + 4 - 2 + 10",
+  "Retroalimentacion": "5 x (8 - 3)² + 10 ÷ 2: Se clasifica en esta categoría porque la presencia de paréntesis obliga a resolver la resta interna antes de proceder con la potencia o las multiplicaciones.; 18 ÷ √8 + 4² - 10 + 2 x 5: Pertenece a raíces y exponentes porque, al no haber paréntesis, la raíz (√8) y la potencia (4²) son los primeros pasos a ejecutar según la regla jerárquica.; 100 - 4³ + √25 x 2: Su prioridad se define por el exponente (4³) y la raíz (√25), elementos que deben calcularse antes de realizar la multiplicación, resta o suma.; 6 + 2 x 5: Se ubica en división y multiplicación ya que el producto (2 x 5) tiene una jerarquía superior y debe resolverse obligatoriamente antes que la suma.; 15 - 7 + 4 - 2 + 10: Esta operación pertenece a la categoría de sumas y restas porque todos sus elementos están en el mismo nivel de prioridad y se resuelven simplemente de izquierda a derecha."
+ },
+ {
+  "Id": 5,
+  "Instruccion": "Selecciona la canasta correcta conforme al tipo de expresión algebraica que es.",
+  "Categorias": "Monomio; Binomio; Trinomio; Polinomio",
+  "Items": "2x-x³+7x²-5x+10; ab³; 11a-b-2; 5x+2x³",
+  "Clasificacion_Correcta": "Monomio: ab³, 5x²; Binomio: -7m+5, 5x+2x³, m²-5n³; Trinomio: 3x³+5z+2, 11a-b-2, 6x³+4+1; Polinomio: 2x-x³+7x²+5x+10, 5x-3x⁴+2x²-5",
+  "Retroalimentacion": "Monomio: Recuerda que un **monomio** es una expresión que tiene un solo término; Binomio: Recuerda que un **binomio** es una expresión con exactamente dos términos; Trinomio: Recuerda que un **trinomio** es una expresión que tiene tres términos; Polinomio: Recuerda que un **polinomio** es una expresión con cuatro o más términos."
+ },
+ {
+  "Instruccion": "Selecciona la canasta correcta conforme al tipo de expresión algebraica que es.",
+  "Categorias": "Monomio; Binomio; Trinomio; Polinomio",
+  "Items": "6x³+4+1; -7m+5; m²-5n³; 5x²; 5x-3x⁴+2x²-5; 3x³+5z+2",
+  "Clasificacion_Correcta": "Monomio: ab³; Binomio: 5x + 2x³; Trinomio: 11a - b - 2; Polinomio: 2x - x³ + 7x² - 5x + 10",
+  "Retroalimentacion": "ab³: Se clasifica como Monomio porque es una única expresión algebraica donde los elementos se están multiplicando, sin signos de suma o resta que separen términos.; 5x + 2x³: Es un Binomio ya que está compuesto por exactamente dos términos (5x y 2x³) conectados por un signo de suma.; 11a - b - 2: Se define como Trinomio porque consta de tres términos algebraicos distintos separados por signos de resta.; 2x - x³ + 7x² - 5x + 10: Pertenece a la categoría de Polinomio porque tiene más de tres términos (en este caso cinco), superando las clasificaciones específicas anteriores."
+ }
+]
+}

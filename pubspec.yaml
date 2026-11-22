@@ -1,0 +1,69 @@
+name: dora
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.0.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  provider: ^6.1.2
+  
+  # Firebase
+  firebase_core: ^3.6.0
+  cloud_firestore: ^5.4.0
+  firebase_auth: ^5.3.0
+  firebase_analytics: ^11.3.0
+  firebase_storage: ^12.3.0
+  
+  # Authentication & Profile
+  google_sign_in: ^6.2.1
+  image_picker: ^1.1.2
+  cached_network_image: ^3.4.1
+  firebase_app_check: ^0.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+  flutter_native_splash: ^2.4.1
+  flutter_launcher_icons: ^0.14.4
+
+# Splash Screen configuration
+flutter_native_splash:
+  color: "#7B5BA3"
+  image: assets/logo_dora_padded.png
+  android: true
+  ios: true
+  android_gravity: center
+  android_12:
+    color: "#7B5BA3"
+    image: assets/logo_dora_padded.png
+  web: false
+
+# App Icon configuration
+flutter_icons:
+  android: true
+  ios: true
+  image_path: assets/logo_dora.png
+  adaptive_icon_background: "#7B5BA3"
+  adaptive_icon_foreground: assets/logo_dora.png
+  web:
+    generate: true
+    image_path: assets/logo_dora.png
+    background_color: "#7B5BA3"
+    theme_color: "#7B5BA3"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/data/
+    - assets/Tienda/

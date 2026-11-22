@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "132589255824",
+    "firebase_url": "https://dora-2fad7-default-rtdb.firebaseio.com",
+    "project_id": "dora-2fad7",
+    "storage_bucket": "dora-2fad7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:132589255824:android:136ccbf40b22eff7676c15",
+        "android_client_info": {
+          "package_name": "com.example.dora"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "132589255824-snt48g3mslit91jt3hjb5mq0j7lvbtvv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dora",
+            "certificate_hash": "134936fc860f4fc67d22eb37b9307713f8b31d87"
+          }
+        },
+        {
+          "client_id": "132589255824-c9s7os4i9b8tqdk76ne6kaf842nmrupc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdXMBo7nVE7q1tLBe9d6WpQvMXWFyPgQg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "132589255824-0vlbuf868h8ivf6umtahlj2f8t0g6k1p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "132589255824-1ajnotnst6e9dp8sj5i5s2dmine4t5o1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.dora"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
