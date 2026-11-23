@@ -89,7 +89,8 @@ class _PreguntaWidgetState extends State<PreguntaWidget> with TickerProviderStat
                         answered = true;
                       });
                       
-                      Future.delayed(const Duration(milliseconds: 600), () {
+                      // Reducido de 600ms a 220ms para respuesta inmediata y natural
+                      Future.delayed(const Duration(milliseconds: 220), () {
                         if (isCorrect) {
                           if (widget.onCorrect != null) widget.onCorrect!();
                           if (!widget.isInsideQuiz) controller.allowNext();
@@ -114,11 +115,15 @@ class _PreguntaWidgetState extends State<PreguntaWidget> with TickerProviderStat
       context: context,
       barrierDismissible: false,
       barrierLabel: "Resultado",
+      transitionDuration: const Duration(milliseconds: 260),
       pageBuilder: (context, anim1, anim2) => const SizedBox(),
       transitionBuilder: (context, anim1, anim2, child) {
-        return ScaleTransition(
-          scale: CurvedAnimation(parent: anim1, curve: Curves.elasticOut),
-          child: AlertDialog(
+        final curveValue = Curves.easeOutBack.transform(anim1.value);
+        return Transform.scale(
+          scale: curveValue,
+          child: Opacity(
+            opacity: anim1.value.clamp(0.0, 1.0),
+            child: AlertDialog(
             backgroundColor: esCorrecta ? const Color(0xFFE8F5E9) : const Color(0xFFEDE7F6),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30), 
@@ -173,9 +178,9 @@ class _PreguntaWidgetState extends State<PreguntaWidget> with TickerProviderStat
               )
             ],
           ),
+          ),
         );
       },
-      transitionDuration: const Duration(milliseconds: 600),
     );
   }
 }

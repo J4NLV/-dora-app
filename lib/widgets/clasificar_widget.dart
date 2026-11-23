@@ -129,9 +129,12 @@ class _ClasificarWidgetState extends State<ClasificarWidget> with TickerProvider
       barrierDismissible: false,
       pageBuilder: (context, a1, a2) => const SizedBox(),
       transitionBuilder: (context, a1, a2, child) {
-        return ScaleTransition(
-          scale: CurvedAnimation(parent: a1, curve: Curves.elasticOut),
-          child: AlertDialog(
+        final curveValue = Curves.easeOutBack.transform(a1.value);
+        return Transform.scale(
+          scale: curveValue,
+          child: Opacity(
+            opacity: a1.value.clamp(0.0, 1.0),
+            child: AlertDialog(
             backgroundColor: isCorrect ? const Color(0xFFE8F5E9) : const Color(0xFFEDE7F6),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30),
@@ -198,9 +201,10 @@ class _ClasificarWidgetState extends State<ClasificarWidget> with TickerProvider
               ),
             ],
           ),
+          ),
         );
       },
-      transitionDuration: const Duration(milliseconds: 400),
+      transitionDuration: const Duration(milliseconds: 250),
     );
   }
 
@@ -210,9 +214,12 @@ class _ClasificarWidgetState extends State<ClasificarWidget> with TickerProvider
       barrierDismissible: false,
       pageBuilder: (context, a1, a2) => const SizedBox(),
       transitionBuilder: (context, a1, a2, child) {
-        return ScaleTransition(
-          scale: CurvedAnimation(parent: a1, curve: Curves.elasticOut),
-          child: AlertDialog(
+        final curveValue = Curves.easeOutBack.transform(a1.value);
+        return Transform.scale(
+          scale: curveValue,
+          child: Opacity(
+            opacity: a1.value.clamp(0.0, 1.0),
+            child: AlertDialog(
             backgroundColor: const Color(0xFF5B3A82),
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
             title: const Icon(Icons.stars_rounded, color: Colors.yellowAccent, size: 70),
@@ -245,9 +252,10 @@ class _ClasificarWidgetState extends State<ClasificarWidget> with TickerProvider
               )
             ],
           ),
+          ),
         );
       },
-      transitionDuration: const Duration(milliseconds: 500),
+      transitionDuration: const Duration(milliseconds: 260),
     );
   }
 

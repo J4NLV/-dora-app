@@ -47,22 +47,15 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
       extendBody: true, // Permite que el body se dibuje por detrás del bottomNavigationBar
       // Fijamos el mismo color de fondo que usan las demás pantallas para que la barra se integre
       backgroundColor: const Color(0xFF7B5BA3),
-      // Usamos AnimatedSwitcher para transiciones suaves
+      // Usamos AnimatedSwitcher para transiciones fluidas y rápidas
       body: AnimatedSwitcher(
-        duration: const Duration(milliseconds: 600), // AUMENTADO A 600ms
-        switchInCurve: Curves.easeInOutCubic, // Curva más pronunciada
-        switchOutCurve: Curves.easeInOutCubic,
+        duration: const Duration(milliseconds: 250), // Reducido de 600ms a 250ms para respuesta inmediata
+        switchInCurve: Curves.easeOutCubic,
+        switchOutCurve: Curves.easeInCubic,
         transitionBuilder: (Widget child, Animation<double> animation) {
-           // Combinamos Fade con un ligero Slide o Scale para hacerlo más "moderno"
            return FadeTransition(
              opacity: animation,
-             child: SlideTransition(
-               position: Tween<Offset>(
-                 begin: const Offset(0.0, 0.05), // Entra desde un poco abajo
-                 end: Offset.zero,
-               ).animate(animation),
-               child: child,
-             ),
+             child: child,
            );
         },
         child: KeyedSubtree(

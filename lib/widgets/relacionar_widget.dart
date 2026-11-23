@@ -97,10 +97,14 @@ class _RelacionarWidgetState extends State<RelacionarWidget> {
       context: context,
       barrierDismissible: false,
       pageBuilder: (context, a1, a2) => const SizedBox(),
+      transitionDuration: const Duration(milliseconds: 260),
       transitionBuilder: (context, a1, a2, child) {
-        return ScaleTransition(
-          scale: CurvedAnimation(parent: a1, curve: Curves.elasticOut),
-          child: AlertDialog(
+        final curveValue = Curves.easeOutBack.transform(a1.value);
+        return Transform.scale(
+          scale: curveValue,
+          child: Opacity(
+            opacity: a1.value.clamp(0.0, 1.0),
+            child: AlertDialog(
             backgroundColor: const Color(0xFF5B3A82),
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
             title: const Icon(Icons.auto_awesome, color: Colors.yellowAccent, size: 70),
@@ -123,6 +127,7 @@ class _RelacionarWidgetState extends State<RelacionarWidget> {
                 ),
               )
             ],
+          ),
           ),
         );
       },
