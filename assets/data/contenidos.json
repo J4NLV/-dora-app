@@ -382,31 +382,37 @@
  {
   "Id": 1,
   "Tema": "LOS TIPOS DE NÚMEROS",
+  "Url_Youtube": "https://youtu.be/Xf6j3P7fWcE",
   "Explicación": "Existen muchos tipos de números, pero se agrupan así:\\nNaturales (N) van del 0 al infinito.\\nEnteros (Z) : positivos y negativos.\\nRacionales (Q): fracciones y decimales exactos.\\nIrracionales (I) no pueden escribirse de forma exacta, como π, e o √3.\\nReales: todos los anteriores..."
  },
  {
   "Id": 2,
   "Tema": "LEYES DE LOS SIGNOS",
+  "Url_Youtube": "",
   "Explicación": "Nos dicen cómo se comportan los números positivos y negativos al multiplicarse o dividirse. \\nSi los signos son iguales, el resultado es positivo. \\nSi son distintos, el resultado es negativo. \\nPermiten resolver operaciones en orden al trabajar con números enteros."
  },
  {
   "Id": 3,
   "Tema": "JERARQUÍA DE OPERACIONES",
+  "Url_Youtube": "https://youtu.be/jfdRnVNZfjc",
   "Explicación": "Para resolver una operación correctamente se sigue este orden: primero los signos de agrupación, luego potencias y raíces, después multiplicación y división, y al final suma y resta."
  },
  {
   "Id": 4,
   "Tema": "EL ÁLGEBRA",
+  "Url_Youtube": "https://youtu.be/eifqlB0XkCw",
   "Explicación": "Es una rama de las matemáticas que usa símbolos y letras para representar valores desconocidos y describir operaciones. Esta misma es útil en la vida diaria para administrar dinero, cocinar, ahorrar y fortalecer el pensamiento lógico."
  },
  {
   "Id": 5,
   "Tema": "EXPRESIONES ALGEBRAICAS",
+  "Url_Youtube": "",
   "Explicación": "Es una combinación de números (constantes) y variables unidas por operaciones. \\nSe usa para representar relaciones matemáticas."
  },
  {
   "Id": 6,
   "Tema": "TÉRMINOS SEMEJANTES",
+  "Url_Youtube": "",
   "Explicación": "Comparten la misma parte literal y el mismo exponente. \\nSi uno es diferente, no son semejantes. \\nEjemplo:\\nSI: - 5x² y x² \\nNO:  x² y x."
  }
 ],

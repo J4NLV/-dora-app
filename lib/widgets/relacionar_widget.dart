@@ -131,7 +131,6 @@ class _RelacionarWidgetState extends State<RelacionarWidget> {
           ),
         );
       },
-      transitionDuration: const Duration(milliseconds: 500),
     );
   }
 

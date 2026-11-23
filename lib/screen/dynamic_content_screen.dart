@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../controllers/content_controller.dart';
+import '../state/player_state_notifier.dart';
 import '../widgets/pregunta_widget.dart';
 import '../widgets/video_widget.dart';
 import '../widgets/clasificar_widget.dart';
