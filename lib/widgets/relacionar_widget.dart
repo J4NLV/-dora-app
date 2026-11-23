@@ -24,6 +24,15 @@ class _RelacionarWidgetState extends State<RelacionarWidget> {
     _setupGame();
   }
 
+  @override
+  void didUpdateWidget(covariant RelacionarWidget oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.data != widget.data) {
+      _setupGame();
+      setState(() {});
+    }
+  }
+
   void _setupGame() {
     leftColumn = (widget.data['Columna_Izquierda'] as String).split(';').map((e) => e.trim()).toList();
     rightColumn = (widget.data['Columna_Derecha'] as String).split(';').map((e) => e.trim()).toList();

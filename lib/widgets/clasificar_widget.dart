@@ -32,6 +32,20 @@ class _ClasificarWidgetState extends State<ClasificarWidget> with TickerProvider
     _cardScale = Tween<double>(begin: 1.0, end: 0.0).animate(CurvedAnimation(parent: _cardController, curve: Curves.easeInBack));
   }
 
+  @override
+  void didUpdateWidget(covariant ClasificarWidget oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.data != widget.data) {
+      items = (widget.data['Items'] as String).split(';').map((e) => e.trim()).toList();
+      categories = (widget.data['Categorias'] as String).split(';').map((e) => e.trim()).toList();
+      currentIndex = 0;
+      correctCount = 0;
+      isShowingFeedback = false;
+      _parseAnswersAndFeedbacks();
+      setState(() {});
+    }
+  }
+
   void _parseAnswersAndFeedbacks() {
     itemToCategory = {};
     itemFeedbacks = {};

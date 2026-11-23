@@ -17,6 +17,14 @@ class _QuizWidgetState extends State<QuizWidget> {
   int correctAnswers = 0;
   bool isRewardAwarded = false;
 
+  @override
+  void didUpdateWidget(covariant QuizWidget oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.questions != widget.questions) {
+      _restartQuiz();
+    }
+  }
+
   void _handleAnswer(bool isCorrect) {
     if (isCorrect) {
       correctAnswers++;

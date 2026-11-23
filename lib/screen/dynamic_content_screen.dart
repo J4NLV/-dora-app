@@ -46,7 +46,10 @@ class DynamicContentScreen extends StatelessWidget {
               colors: [Color(0xFF7B5BA3), Color(0xFF5B3A82)],
             ),
           ),
-          child: _buildContent(leccion.tipo, data),
+          child: KeyedSubtree(
+            key: ValueKey(leccion.id),
+            child: _buildContent(leccion.tipo, data),
+          ),
         ),
       ),
       bottomNavigationBar: Container(
