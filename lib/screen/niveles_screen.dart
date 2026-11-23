@@ -173,6 +173,7 @@ class _AnimatedNodeBox extends StatefulWidget {
 class _AnimatedNodeBoxState extends State<_AnimatedNodeBox> with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _scale;
+  bool _isNavigating = false;
 
   @override
   void initState() {
@@ -186,15 +187,31 @@ class _AnimatedNodeBoxState extends State<_AnimatedNodeBox> with SingleTickerPro
   }
 
   @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final colorBase = widget.isUnlocked ? const Color(0xFFD4C5E0) : Colors.grey[400];
     final colorSombra = widget.isUnlocked ? const Color(0xFF7B5BA3) : Colors.grey[700];
 
     return GestureDetector(
       onTap: () {
-        if (widget.isUnlocked) {
+        if (widget.isUnlocked && !_isNavigating) {
+          _isNavigating = true;
           _controller.forward(from: 0.0);
-          Future.delayed(const Duration(milliseconds: 200), widget.onTap);
+          Future.delayed(const Duration(milliseconds: 200), () {
+            if (mounted) {
+              widget.onTap();
+              Future.delayed(const Duration(milliseconds: 600), () {
+                if (mounted) {
+                  _isNavigating = false;
+                }
+              });
+            }
+          });
         }
       },
       child: AnimatedBuilder(
@@ -268,11 +285,5 @@ class _AnimatedNodeBoxState extends State<_AnimatedNodeBox> with SingleTickerPro
       case 'relacionar': return Icons.compare_arrows_rounded;
       default: return Icons.star_rounded;
     }
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
   }
 }

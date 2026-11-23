@@ -30,6 +30,7 @@ class _PerfilScreenState extends State<PerfilScreen> with SingleTickerProviderSt
   UserModel? _currentUser;
   List<UserModel> _friends = [];
   bool _isLoading = true;
+  bool _isNavigatingToShop = false;
 
   // Animation controller for entrance animations
   late AnimationController _animationController;
@@ -150,10 +151,17 @@ class _PerfilScreenState extends State<PerfilScreen> with SingleTickerProviderSt
                             // Streak card con evento onTap para ir a la Tienda
                             _AnimatedPressableCard(
                               onTap: () {
+                                 if (_isNavigatingToShop) return;
+                                 _isNavigatingToShop = true;
                                  Navigator.push(
                                    context, 
                                    MaterialPageRoute(builder: (context) => const ShopScreen())
-                                 ).then((_) => _loadUserData());
+                                 ).then((_) {
+                                   if (mounted) {
+                                     setState(() => _isNavigatingToShop = false);
+                                     _loadUserData();
+                                   }
+                                 });
                               },
                               child: _buildStreakCard(playerState),
                             ),
@@ -294,10 +302,17 @@ class _PerfilScreenState extends State<PerfilScreen> with SingleTickerProviderSt
         // AVATAR CIRCULAR PRINCIPAL MEJORADO
         GestureDetector(
            onTap: () {
+              if (_isNavigatingToShop) return;
+              _isNavigatingToShop = true;
               Navigator.push(
                 context, 
                 MaterialPageRoute(builder: (context) => const ShopScreen())
-              ).then((_) => _loadUserData());
+              ).then((_) {
+                if (mounted) {
+                  setState(() => _isNavigatingToShop = false);
+                  _loadUserData();
+                }
+              });
            },
            child: Container(
             width: 120,
