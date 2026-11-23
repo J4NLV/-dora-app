@@ -12,6 +12,13 @@ class NivelesScreen extends StatelessWidget {
     final controller = context.watch<ContentController>();
     final playerState = context.watch<PlayerStateNotifier>().playerState;
 
+    // Sincronizar lecciones desbloqueadas/completadas desde la nube (Firestore)
+    if (playerState.completedLessons.isNotEmpty) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        controller.syncCompletedLessons(playerState.completedLessons);
+      });
+    }
+
     if (controller.isLoading) {
       return const Scaffold(
         backgroundColor: Color(0xFF5B3A82),

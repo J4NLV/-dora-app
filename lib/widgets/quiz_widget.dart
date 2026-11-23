@@ -168,6 +168,10 @@ class _QuizWidgetState extends State<QuizWidget> {
                 ),
                 onPressed: () {
                   Navigator.pop(ctx);
+                  final current = controller.getCurrentLeccion();
+                  if (current != null) {
+                    context.read<PlayerStateNotifier>().completeLesson(current.id);
+                  }
                   controller.nextLeccion();
                 },
               ),

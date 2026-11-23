@@ -8,6 +8,7 @@ class PlayerState {
   final int streakDays;
   final int doracoins;
   final int currentPracticeLevel;
+  final List<String> completedLessons;
   // Nuevos campos para personalización
   final String? equippedHair;
   final String? equippedGlasses;
@@ -18,6 +19,7 @@ class PlayerState {
     required this.streakDays,
     required this.doracoins,
     required this.currentPracticeLevel,
+    this.completedLessons = const [],
     this.equippedHair,
     this.equippedGlasses,
     this.equippedHat,
@@ -28,6 +30,7 @@ class PlayerState {
     int? streakDays,
     int? doracoins,
     int? currentPracticeLevel,
+    List<String>? completedLessons,
     String? equippedHair,
     String? equippedGlasses,
     String? equippedHat,
@@ -37,6 +40,7 @@ class PlayerState {
       streakDays: streakDays ?? this.streakDays,
       doracoins: doracoins ?? this.doracoins,
       currentPracticeLevel: currentPracticeLevel ?? this.currentPracticeLevel,
+      completedLessons: completedLessons ?? this.completedLessons,
       equippedHair: equippedHair ?? this.equippedHair,
       equippedGlasses: equippedGlasses ?? this.equippedGlasses,
       equippedHat: equippedHat ?? this.equippedHat,
@@ -50,6 +54,7 @@ class PlayerStateNotifier extends ChangeNotifier {
     streakDays: 0,
     doracoins: 0,
     currentPracticeLevel: 1,
+    completedLessons: [],
     inventory: [],
   );
 
@@ -117,6 +122,7 @@ class PlayerStateNotifier extends ChangeNotifier {
       streakDays: stats.streakDays,
       doracoins: stats.doracoins,
       currentPracticeLevel: stats.currentPracticeLevel,
+      completedLessons: stats.completedLessons,
       inventory: stats.inventory,
       equippedHair: stats.equippedHair,
       equippedGlasses: stats.equippedGlasses,
@@ -153,6 +159,8 @@ class PlayerStateNotifier extends ChangeNotifier {
         'streakDays': _playerState.streakDays,
         'doracoins': _playerState.doracoins,
         'inventory': _playerState.inventory,
+        'completedLessons': _playerState.completedLessons,
+        'currentPracticeLevel': _playerState.currentPracticeLevel,
         'equippedHair': _playerState.equippedHair,
         'equippedGlasses': _playerState.equippedGlasses,
         'equippedHat': _playerState.equippedHat,
@@ -166,6 +174,15 @@ class PlayerStateNotifier extends ChangeNotifier {
   }
 
   // --- Actions ---
+
+  void completeLesson(String lessonId) {
+    if (!_playerState.completedLessons.contains(lessonId)) {
+      final updated = List<String>.from(_playerState.completedLessons)..add(lessonId);
+      _playerState = _playerState.copyWith(completedLessons: updated);
+      notifyListeners();
+      _saveToFirestore();
+    }
+  }
 
   void equipItem({String? hair, String? glasses, String? hat}) {
     _playerState = _playerState.copyWith(
@@ -217,6 +234,7 @@ class PlayerStateNotifier extends ChangeNotifier {
       streakDays: 0,
       doracoins: 0,
       currentPracticeLevel: 1,
+      completedLessons: [],
       inventory: [],
     );
     _isLoading = true;

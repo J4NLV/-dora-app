@@ -62,7 +62,15 @@ class DynamicContentScreen extends StatelessWidget {
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
             elevation: controller.canMoveToNext ? 5 : 0,
           ),
-          onPressed: controller.canMoveToNext ? () => controller.nextLeccion() : null,
+          onPressed: controller.canMoveToNext
+              ? () {
+                  final current = controller.getCurrentLeccion();
+                  if (current != null) {
+                    context.read<PlayerStateNotifier>().completeLesson(current.id);
+                  }
+                  controller.nextLeccion();
+                }
+              : null,
           child: Text(
             controller.canMoveToNext ? "CONTINUAR" : "¡TERMINA EL RETO PARA AVANZAR!",
             style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 18, letterSpacing: 1.2),

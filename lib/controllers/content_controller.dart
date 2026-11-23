@@ -18,6 +18,18 @@ class ContentController extends ChangeNotifier {
 
   ContentController() { _cargarDatos(); }
 
+  void syncCompletedLessons(List<String> cloudCompleted) {
+    bool changed = false;
+    for (var id in cloudCompleted) {
+      if (leccionesCompletadas.add(id)) {
+        changed = true;
+      }
+    }
+    if (changed) {
+      notifyListeners();
+    }
+  }
+
   Future<void> _cargarDatos() async {
     isLoading = true;
     notifyListeners();

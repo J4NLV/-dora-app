@@ -7,6 +7,7 @@ class PlayerStatsModel {
   final int doracoins;
   final List<String> inventory;
   final int currentPracticeLevel;
+  final List<String> completedLessons; // Lecciones/secciones completadas del camino
   // Campos de personalización
   final String? equippedHair;
   final String? equippedGlasses;
@@ -21,6 +22,7 @@ class PlayerStatsModel {
     required this.doracoins,
     required this.inventory,
     required this.currentPracticeLevel,
+    this.completedLessons = const [],
     this.equippedHair,
     this.equippedGlasses,
     this.equippedHat,
@@ -37,6 +39,7 @@ class PlayerStatsModel {
       doracoins: 0,
       inventory: const [],
       currentPracticeLevel: 1,
+      completedLessons: const [],
       lastUpdated: now,
       createdAt: now,
     );
@@ -50,6 +53,7 @@ class PlayerStatsModel {
       'doracoins': doracoins,
       'inventory': inventory,
       'currentPracticeLevel': currentPracticeLevel,
+      'completedLessons': completedLessons,
       'equippedHair': equippedHair,
       'equippedGlasses': equippedGlasses,
       'equippedHat': equippedHat,
@@ -72,6 +76,7 @@ class PlayerStatsModel {
       doracoins: map['doracoins'] as int? ?? 0,
       inventory: List<String>.from(map['inventory'] as List? ?? []),
       currentPracticeLevel: map['currentPracticeLevel'] as int? ?? 0,
+      completedLessons: List<String>.from(map['completedLessons'] as List? ?? []),
       equippedHair: map['equippedHair'] as String?,
       equippedGlasses: map['equippedGlasses'] as String?,
       equippedHat: map['equippedHat'] as String?,
